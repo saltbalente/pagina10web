@@ -362,6 +362,115 @@
                 </div>
             </div>
         </section>
+<section data-blk="tarjetas-de-servicios-premium-con-fotos-" id="servicios-premium" style="background:#020202; padding: 6rem 1.5rem; font-family: 'Lora', serif;">
+  <style>
+    #servicios-premium *{box-sizing:border-box;}
+    #servicios-premium .sp-wrap{max-width:1000px;margin:0 auto;}
+    #servicios-premium .sp-head{text-align:center;max-width:62ch;margin:0 auto 3rem;}
+    #servicios-premium .sp-eyebrow{display:inline-block;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:#eab308;border:1px solid rgba(234,179,8,.4);padding:7px 20px;border-radius:50px;margin:0 0 1.3rem;}
+    #servicios-premium .sp-title{font-family:'Cinzel',serif;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.15;color:#f4f4f5;margin:0 0 1rem;font-weight:600;}
+    #servicios-premium .sp-title em{color:#eab308;font-style:normal;}
+    #servicios-premium .sp-intro{font-size:clamp(1rem,1.2vw,1.08rem);line-height:1.7;color:rgba(244,244,245,.72);margin:0;}
+    #servicios-premium .sp-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:1.5rem;}
+    @media(min-width:768px){#servicios-premium .sp-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}}
+    #servicios-premium .sp-card{position:relative;border-radius:12px;overflow:hidden;min-height:580px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:0 4px 15px rgba(17,94,89,.3);border:1px solid rgba(255,255,255,.08);background:#0a0a0a;}
+    #servicios-premium .sp-card-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+    #servicios-premium .sp-card-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(2,2,2,.15) 0%,rgba(2,2,2,.55) 42%,rgba(2,2,2,.96) 100%);}
+    #servicios-premium .sp-card-body{position:relative;z-index:2;padding:2rem 1.75rem;display:flex;flex-direction:column;gap:1rem;}
+    #servicios-premium .sp-card-tag{display:inline-flex;align-items:center;gap:.5rem;font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#eab308;width:fit-content;}
+    #servicios-premium .sp-card-tag::before{content:"";width:22px;height:1px;background:#eab308;display:inline-block;}
+    #servicios-premium .sp-card-title{font-family:'Cinzel',serif;font-size:clamp(1.5rem,2.6vw,1.95rem);line-height:1.18;color:#f4f4f5;margin:0;font-weight:600;}
+    #servicios-premium .sp-card-sub{font-size:.95rem;line-height:1.6;color:rgba(244,244,245,.72);margin:0;font-style:italic;}
+    #servicios-premium .sp-list{list-style:none;margin:.25rem 0 0;padding:0;display:flex;flex-direction:column;gap:.6rem;}
+    #servicios-premium .sp-list li{display:flex;align-items:flex-start;gap:.65rem;font-size:.92rem;line-height:1.5;color:rgba(244,244,245,.9);}
+    #servicios-premium .sp-list svg{flex-shrink:0;margin-top:3px;color:#eab308;}
+    #servicios-premium .sp-price{display:flex;align-items:baseline;gap:.6rem;margin-top:.5rem;padding-top:1rem;border-top:1px solid rgba(234,179,8,.18);}
+    #servicios-premium .sp-price-label{font-size:.74rem;color:rgba(244,244,245,.5);text-transform:uppercase;letter-spacing:.12em;}
+    #servicios-premium .sp-price-value{font-family:'Cinzel',serif;font-size:1.65rem;color:#eab308;line-height:1;}
+    #servicios-premium .sp-price-note{font-size:.78rem;color:rgba(244,244,245,.5);}
+    #servicios-premium .sp-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:#115e59;color:#fff;text-decoration:none;font-family:'Cinzel',serif;font-size:.88rem;letter-spacing:.05em;padding:14px 24px;border-radius:50px;border:1px solid rgba(234,179,8,.3);transition:transform .2s ease,background .2s ease;margin-top:.5rem;width:fit-content;}
+    #servicios-premium .sp-btn:hover,#servicios-premium .sp-btn:focus-visible{background:#0d4943;transform:translateY(-2px);outline:none;}
+    #servicios-premium .sp-btn:focus-visible{box-shadow:0 0 0 3px rgba(234,179,8,.45);}
+    #servicios-premium .sp-micro{font-size:.76rem;color:rgba(244,244,245,.45);margin:.5rem 0 0;}
+    #servicios-premium .sp-foot{text-align:center;margin-top:2.75rem;}
+    #servicios-premium .sp-foot p{font-size:.95rem;color:rgba(244,244,245,.7);margin:0 0 1rem;}
+    #servicios-premium .sp-foot-btn{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:#eab308;text-decoration:none;font-family:'Cinzel',serif;font-size:.88rem;letter-spacing:.05em;padding:12px 28px;border-radius:50px;border:1px solid #eab308;transition:background .2s ease,color .2s ease;}
+    #servicios-premium .sp-foot-btn:hover,#servicios-premium .sp-foot-btn:focus-visible{background:#eab308;color:#020202;outline:none;}
+    @media(prefers-reduced-motion:reduce){#servicios-premium .sp-btn,#servicios-premium .sp-foot-btn{transition:none;}}
+  </style>
+
+  <div class="sp-wrap">
+    <div class="sp-head">
+      <span class="sp-eyebrow">Rituales de Intervención</span>
+      <h2 class="sp-title">Dos caminos para recuperar tu <em>paz y tu destino</em></h2>
+      <p class="sp-intro">Cada caso es distinto. A veces necesitas soltar lo que te agobia; otras, descubrir quién lo envió. Estos son los dos trabajos que con mayor frecuencia devuelven la calma a quienes llegan hasta mí.</p>
+    </div>
+
+    <div class="sp-grid">
+
+      <article class="sp-card">
+        <img style="object-fit:cover;object-position:center" class="sp-card-img" src="https://sintomas-de-brujeria.videntes.org/optimizado/ag-200183872764/maq-1784666989446-1-ritual-de-limpieza-con-velas-y-limones.webp" alt="Ritual de limpieza espiritual con velas y limones sobre altar" loading="lazy" decoding="async" width="500" height="580">
+        <div class="sp-card-overlay" aria-hidden="true"></div>
+        <div class="sp-card-body">
+          <span class="sp-card-tag">Purificación Energética</span>
+          <h3 class="sp-card-title">Limpieza Espiritual Profunda</h3>
+          <p class="sp-card-sub">Libera tu cuerpo y tu aura de las energías densas que estancan tu vida.</p>
+          <ul class="sp-list">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Disuelve bloqueos energéticos acumulados durante años.</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Corta envidias, malas miradas y pesadez ambiental en tu hogar.</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Restaura el sueño, el ánimo y la claridad mental perdidos.</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Prepara tu campo para rituales de amor y prosperidad.</li>
+          </ul>
+          <div class="sp-price">
+            <span class="sp-price-label">Desde</span>
+            <span class="sp-price-value">$80 USD</span>
+            <span class="sp-price-note">· materiales incluidos</span>
+          </div>
+          <a class="sp-btn" href="https://wa.me/14133912149?text=Maestro%20Hilario%2C%20necesito%20una%20limpieza%20espiritual.%20%C2%BFQu%C3%A9%20debo%20hacer%3F">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Solicitar mi limpieza
+          </a>
+          <p class="sp-micro">Atención discreta · Respuesta el mismo día</p>
+        </div>
+      </article>
+
+      <article class="sp-card">
+        <img style="object-fit:cover;object-position:center" class="sp-card-img" src="https://sintomas-de-brujeria.videntes.org/optimizado/ag-200183872764/maq-1784666989446-2-maestro-esoterico-con-craneo-ritual.webp" alt="Maestro esotérico sosteniendo cráneo ritual durante diagnóstico espiritual" loading="lazy" decoding="async" width="500" height="580">
+        <div class="sp-card-overlay" aria-hidden="true"></div>
+        <div class="sp-card-body">
+          <span class="sp-card-tag">Lectura Espiritual</span>
+          <h3 class="sp-card-title">Diagnóstico de Brujería</h3>
+          <p class="sp-card-sub">Descubre si un trabajo oscuro está detrás de tu mala racha y cómo revertirlo.</p>
+          <ul class="sp-list">
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Identifica magia negra, vudú, amarre forzado o mal de ojo.</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Revela el origen y el responsable del ataque espiritual.</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Evalúa el daño en tu salud, tu dinero y tus relaciones.</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>Define el plan exacto de desmanche y protección.</li>
+          </ul>
+          <div class="sp-price">
+            <span class="sp-price-label">Desde</span>
+            <span class="sp-price-value">$60 USD</span>
+            <span class="sp-price-note">· consulta completa</span>
+          </div>
+          <a class="sp-btn" href="https://wa.me/14133912149?text=Maestro%20Hilario%2C%20creo%20que%20me%20hicieron%20brujer%C3%ADa.%20%C2%BFPuede%20hacerme%20un%20diagn%C3%B3stico%3F">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Pedir mi diagnóstico
+          </a>
+          <p class="sp-micro">Sin juicios · Confidencialidad absoluta</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="sp-foot">
+      <p>¿No sabes cuál de los dos servicios necesitas? Cuéntame qué sientes y yo te indico el camino.</p>
+      <a class="sp-foot-btn" href="https://wa.me/14133912149?text=Maestro%20Hilario%2C%20no%20s%C3%A9%20qu%C3%A9%20servicio%20necesito.%20%C2%BFMe%20orienta%3F">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Hablar con el Maestro Hilario
+      </a>
+    </div>
+  </div>
+</section>
 
         <!-- SINTOMAS Y SOLUCIONES -->
         <section id="consulta">
