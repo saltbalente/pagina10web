@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Brujos cerca de mi — Consulta gratis con el Maestro Fidencio. Amarres, regresos de pareja, limpiezas espirituales y tarot profesional. Atiende por WhatsApp a hispanos en todo Estados Unidos. Resultados desde la primera consulta. Escríbele hoy.">
+    <title>Brujos Cerca De Mi · Maestro Fidencio · Consulta Gratis 24/7</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #111111;
+            --surface: #ffffff;
+            --text: #ffffff;
+            --text-dark: #1a1a1a;
+            --primary: #4d90fe;
+            --primary-hover: #3a7de0;
+            --accent: #000000;
+            --card-bg: #1e1e1e;
+            --card-border: #2a2a2a;
+            --muted: #b0b0b0;
+            --radius-card: 20px;
+            --radius-btn: 5px;
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
+            --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.35);
+            --font-heading: 'Merriweather', 'Times New Roman', serif;
+            --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            --max-width: 630px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            font-weight: 400;
+            line-height: 1.65;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        main {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        /* ── HEADER STICKY ── */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            background: rgba(17, 17, 17, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--card-border);
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .header-brand {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text);
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+
+        .header-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: #25D366;
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.82rem;
+            padding: 8px 14px;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 0.01em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            flex-shrink: 0;
+        }
+        .header-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+        }
+        .header-cta svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        /* ── SECTIONS ── */
+        section {
+            padding: 32px 0;
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        section:first-of-type {
+            padding-top: 16px;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            text-align: center;
+            padding: 20px 0 28px;
+            position: relative;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 14px;
+        }
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: clamp(1.7rem, 5vw, 2.2rem);
+            line-height: 1.2;
+            color: var(--text);
+            margin-bottom: 10px;
+            letter-spacing: -0.01em;
+        }
+        .hero h1 .highlight {
+            color: var(--primary);
+        }
+        .hero-sub {
+            font-size: 1.05rem;
+            color: var(--muted);
+            margin-bottom: 8px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        .hero-sub strong {
+            color: #fff;
+            font-weight: 600;
+        }
+        .hero-img-wrap {
+            margin: 16px auto;
+            border-radius: var(--radius-card);
+            overflow: hidden;
+            max-height: 40vh;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: var(--shadow-lg);
+            aspect-ratio: 5 / 6;
+        }
+        .hero-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 14px 32px;
+            border-radius: var(--radius-btn);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            margin-top: 10px;
+            animation: ctaPulse 2.5s infinite ease-in-out;
+            box-shadow: 0 8px 28px rgba(77, 144, 254, 0.45);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 36px rgba(77, 144, 254, 0.55);
+        }
+        .hero-cta svg {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+        @keyframes ctaPulse {
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 8px 28px rgba(77, 144, 254, 0.45);
+            }
+            50% {
+                transform: scale(1.04);
+                box-shadow: 0 14px 38px rgba(77, 144, 254, 0.6);
+            }
+        }
+        .hero-trust {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 20px;
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: var(--muted);
+            letter-spacing: 0.02em;
+        }
+        .hero-trust span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .hero-trust span::before {
+            content: '✦';
+            color: var(--primary);
+            font-size: 0.7rem;
+        }
+
+        /* ── SECTION HEADINGS ── */
+        h2 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: clamp(1.35rem, 4.5vw, 1.65rem);
+            color: var(--text);
+            margin-bottom: 14px;
+            letter-spacing: -0.01em;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            margin-top: 8px;
+            border-radius: 2px;
+        }
+        h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        /* ── CARDS ── */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-card);
+            padding: 22px 18px;
+            margin-bottom: 14px;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+        }
+        .card p {
+            color: #d5d5d5;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .card .emoji-accent {
+            font-size: 1.6rem;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        /* ── SERVICE GRID ── */
+        .services-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        @media (min-width: 768px) {
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+            .services-grid .card {
+                margin-bottom: 0;
+            }
+        }
+        .service-img {
+            width: 100%;
+            aspect-ratio: 5 / 6;
+            object-fit: cover;
+            border-radius: 14px;
+            margin-bottom: 10px;
+            max-height: 35vh;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ── ABOUT MASTER ── */
+        .about-master {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            text-align: center;
+        }
+        .about-master-img {
+            width: 72%;
+            max-width: 300px;
+            aspect-ratio: 5 / 6;
+            object-fit: cover;
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-lg);
+            max-height: 40vh;
+        }
+        .about-master-text p {
+            color: #d5d5d5;
+            font-size: 0.95rem;
+            line-height: 1.65;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        @media (min-width: 768px) {
+            .about-master {
+                flex-direction: row;
+                text-align: left;
+                align-items: flex-start;
+            }
+            .about-master-img {
+                width: 40%;
+                max-width: 260px;
+            }
+            .about-master-text {
+                flex: 1;
+            }
+        }
+
+        /* ── TESTIMONIALS ── */
+        .testimonial-card {
+            background: #1a1a1a;
+            border-left: 3px solid var(--primary);
+            border-radius: 0 14px 14px 0;
+            padding: 16px 18px;
+            margin-bottom: 12px;
+            box-shadow: var(--shadow-card);
+        }
+        .testimonial-card .quote {
+            font-style: italic;
+            color: #e0e0e0;
+            font-size: 0.93rem;
+            line-height: 1.55;
+            margin-bottom: 8px;
+        }
+        .testimonial-card .author {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.85rem;
+            letter-spacing: 0.02em;
+        }
+        .testimonial-card .location {
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        /* ── FAQ ── */
+        details {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        details[open] {
+            background: #252525;
+        }
+        summary {
+            font-weight: 600;
+            font-size: 0.98rem;
+            color: #fff;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::after {
+            content: '▾';
+            font-size: 1.1rem;
+            color: var(--primary);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+        details .faq-answer {
+            padding-top: 8px;
+            color: #c8c8c8;
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+
+        /* ── CTA INLINE ── */
+        .cta-inline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #25D366;
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 12px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            margin: 6px 0;
+        }
+        .cta-inline:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 26px rgba(37, 211, 102, 0.5);
+        }
+        .cta-inline svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+        .cta-primary-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 13px 28px;
+            border-radius: var(--radius-btn);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 8px 24px rgba(77, 144, 254, 0.4);
+        }
+        .cta-primary-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(77, 144, 254, 0.5);
+        }
+        .cta-primary-btn svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        /* ── FOOTER ── */
+        .site-footer {
+            text-align: center;
+            padding: 20px 0 32px;
+            color: var(--muted);
+            font-size: 0.78rem;
+            border-top: 1px solid var(--card-border);
+            margin-top: 16px;
+            width: 100%;
+            max-width: var(--max-width);
+        }
+        .site-footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* ── REDUCED MOTION ── */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            section {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+    </style>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N88RGDQH');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16586320392"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16586320392');</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%236d28d9'/><text x='32' y='44' font-size='34' text-anchor='middle'>🔮</text></svg>">
+</head>
+<body>
+<script id="wa-slider-guard">(function(){if(window.__waSliderGuard)return;window.__waSliderGuard=1;var o=Element.prototype.scrollIntoView;Element.prototype.scrollIntoView=function(){var c=this.parentElement;while(c&&c!==document.body&&!(c.scrollWidth>c.clientWidth+8))c=c.parentElement;if(c&&c!==document.body){var cr=c.getBoundingClientRect(),er=this.getBoundingClientRect();c.scrollTo({left:c.scrollLeft+(er.left-cr.left)-(cr.width-er.width)/2,behavior:'smooth'});return}return o.apply(this,arguments)};})();</script>
+<script id="wa-touch-guard">(function(){if(window.__waTouchGuard)return;window.__waTouchGuard=1;var o=EventTarget.prototype.addEventListener;EventTarget.prototype.addEventListener=function(t,f,x){if(t==='touchmove'||t==='touchstart'){var p=(typeof x==='object'&&x)?x:{capture:x===true};if(p.passive!==true)x={capture:!!p.capture,once:!!p.once,passive:true};}return o.call(this,t,f,x);};addEventListener('DOMContentLoaded',function(){try{var els=document.body.querySelectorAll('*');for(var i=0;i<els.length;i++){var c=getComputedStyle(els[i]).touchAction;if(c==='none'||c==='pan-x'){els[i].style.touchAction='pan-x pan-y pinch-zoom';}}}catch(e){}});})();</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N88RGDQH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- HEADER STICKY -->
+    <header class="site-header" aria-label="Cabecera de navegación">
+        <span class="header-brand">✦ Maestro Fidencio</span>
+        <a href="https://wa.me/14133912149?text=Hola%20Maestro%20Fidencio%2C%20quiero%20mi%20consulta%20gratis%20de%20brujos%20cerca%20de%20mi" class="header-cta" aria-label="WhatsApp del Maestro Fidencio">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp
+        </a>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 1: HERO -->
+        <section class="hero" id="hero">
+            <span class="hero-badge">Brujos Cerca De Mi · Disponible 24/7</span>
+            <h1><span class="highlight">Brujos Cerca De Mi</span> — Consulta Gratis con el Maestro Fidencio</h1>
+            <p class="hero-sub"><strong>Brujos cerca de mi</strong> que sí responden. Atiendo por WhatsApp a hispanos en todo Estados Unidos. Regreso al ser querido en 72 horas. Sin importar edad, tiempo ni distancia. <strong>Donde otros fracasan, yo triunfo.</strong></p>
+            <div class="hero-img-wrap">
+                
+            </div>
+            <a href="https://wa.me/14133912149?text=Hola%20Maestro%20Fidencio%2C%20quiero%20mi%20consulta%20gratis%20ya%20mismo" class="hero-cta">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                Consulta Gratis por WhatsApp
+            </a>
+            <div class="hero-trust">
+                <span>35+ años de experiencia</span>
+                <span>Pagas al ver resultados</span>
+                <span>Atiendo 24/7</span>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: ALTA BRUJERÍA PODEROSA -->
+        <section id="alta-brujeria">
+            <h2>Alta Brujería Poderosa — Brujos Cerca De Mi con Resultados Reales</h2>
+            <p style="color:#d5d5d5;margin-bottom:14px;">Cuando buscas <strong>brujos cerca de mi</strong> necesitas a alguien que no solo hable: que actúe. Mis trabajos de alta brujería cruzan mente, cuerpo y espíritu de esa persona, dominando pensamiento y sentimiento hasta doblegar su orgullo, indiferencia o rebeldía. Retiro rivales, quito infidelidades y cierro bocas que hablan de más. No hay caso pequeño ni grande: hay energía bien canalizada.</p>
+            <div class="services-grid">
+                <div class="card">
+                    <span class="emoji-accent">🕯️</span>
+                    <h3>Amarres de Amor Efectivos</h3>
+                    <p>Regreso al ser querido en 72 horas. Sin importar edad, sexo, tiempo ni distancia. Un lazo que une dos almas con la fuerza de la luna llena.</p>
+                </div>
+                <div class="card">
+                    <span class="emoji-accent">🧹</span>
+                    <h3>Limpiezas Espirituales</h3>
+                    <p>Retiro malas energías, posesiones, espíritus y enfermedades postizas. Tu hogar y tu aura quedan como recién nacidos.</p>
+                </div>
+                <div class="card">
+                    <span class="emoji-accent">🛡️</span>
+                    <h3>Protecciones y Contras</h3>
+                    <p>Sanciones espirituales, protecciones blindadas y contras para devolver todo daño a quien lo envió. Tu escudo invisible.</p>
+                </div>
+                <div class="card">
+                    <span class="emoji-accent">💀</span>
+                    <h3>Retiro de Amantes y Rivales</h3>
+                    <p>Separo lo que no debe estar junto. El rival se aleja sin escándalo, sin violencia, como hoja que arrastra el viento.</p>
+                </div>
+            </div>
+            
+            <p style="text-align:center;color:var(--primary);font-weight:600;margin-top:6px;">La llama no pregunta quién eres: solo necesita que la enciendas.</p>
+        </section>
+
+        <!-- SECCIÓN 3: TAROT PROFESIONAL -->
+        <section id="tarot-profesional">
+            <h2>Tarot Profesional — Revelación de Destino</h2>
+            <p style="color:#d5d5d5;margin-bottom:14px;">El tarot no miente. En cada carta hay un mensaje para ti. Como <strong>brujos cerca de mi</strong> que honran el oráculo, uso el tarot para desvelar lo que tu corazón ya intuye pero tu mente no se atreve a aceptar. Una consulta de tarot profesional te muestra el camino, las trabas y la decisión que cambiará todo.</p>
+            
+            <p style="text-align:center;color:var(--primary);font-weight:600;margin-top:6px;">Una carta puede decirlo todo. El primer paso ya lo diste al llegar aquí — termina de darlo.</p>
+            <div style="text-align:center;margin-top:10px;">
+                <a href="https://wa.me/14133912149?text=Maestro%20Fidencio%2C%20quiero%20una%20consulta%20de%20tarot%20gratis" class="cta-inline">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                    Consulta de Tarot Gratis
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: SOBRE EL MAESTRO FIDENCIO -->
+        <section id="sobre-el-maestro">
+            <h2>Sobre el Maestro Fidencio</h2>
+            <div class="about-master">
+                
+                <div class="about-master-text">
+                    <p>Soy <strong>Fidencio</strong>, un brujo con más de 35 años de práctica en el arte espiritual. No aprendí en libros; aprendí en el altar, con las velas encendidas y los espíritus como testigos. He forjado mi reputación ayudando a cientos de almas a conquistar sus deseos amorosos, su éxito profesional y su poder personal. Cada caso que llega a mis manos es tratado con el respeto de un ritual sagrado.</p>
+                    <p>Cuando buscas <strong>brujos cerca de mi</strong>, no buscas a cualquiera: buscas a quien de verdad escuche tu historia y ponga su don al servicio de tu felicidad. Mi linaje espiritual viene de quienes caminaron antes que yo, y cada trabajo que realizo lleva la marca de esa herencia. No prometo lo que no puedo cumplir. Te ofrezco mi arte, mi tiempo y mi palabra.</p>
+                    <p style="color:var(--primary);font-weight:600;">Donde otros han fracasado, yo triunfo. No es orgullo: es verdad comprobada.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: MAESTRO FIDENCIO — SOLUCIONES -->
+        <section id="soluciones">
+            <h2>El Maestro Fidencio Resuelve lo que Otros No Pueden</h2>
+            <p style="color:#d5d5d5;margin-bottom:14px;">Si estás buscando <strong>brujos cerca de mi</strong> que te ofrezcan soluciones reales, has llegado al destino correcto. Ofrezco una amplia variedad de opciones mágicas: amarres de amor, endulzamientos, hechizos, entierros vudú, magia negra, blanca y roja. Cada trabajo es analizado con una consulta previa para determinar qué tipo de intervención necesita tu caso. No hay dos caminos iguales, ni dos rituales idénticos.</p>
+            <div class="services-grid">
+                <div class="card">
+                    <span class="emoji-accent">❤️</span>
+                    <h3>Endulzamientos</h3>
+                    <p>Endulzo el corazón de esa persona para que te vea con otros ojos. La miel de mi ritual obra maravillas en menos de una semana.</p>
+                </div>
+                <div class="card">
+                    <span class="emoji-accent">🌿</span>
+                    <h3>Hierbas y Velas Mágicas</h3>
+                    <p>Soy especialista en el uso de velas y hierbas mágicas para potenciar hechizos y conjuros. Cada elemento tiene su propósito.</p>
+                </div>
+                <div class="card">
+                    <span class="emoji-accent">🔮</span>
+                    <h3>Rituales para Atraer el Amor</h3>
+                    <p>Ceremonias completas para atraer el amor, la pasión y la felicidad. El amor no se busca: se atrae con la energía correcta.</p>
+                </div>
+                <div class="card">
+                    <span class="emoji-accent">⚡</span>
+                    <h3>Magia Negra, Blanca y Roja</h3>
+                    <p>Domino las tres fuerzas. Dependiendo de tu necesidad, elijo la que mejor canalice tu deseo. Sin daño alguno, sin consecuencias negativas.</p>
+                </div>
+            </div>
+            
+            <p style="text-align:center;color:var(--primary);font-weight:600;margin-top:6px;">Cada vela que enciendo lleva tu nombre grabado en su cera.</p>
+        </section>
+
+        <!-- SECCIÓN 6: CONSULTA GRATIS -->
+        <section id="consulta-gratis-1">
+            <h2>Consulta Gratis — Brujos Cerca De Mi que Sí Contestan</h2>
+            <p style="color:#d5d5d5;margin-bottom:14px;">El Maestro Fidencio no cobra por escucharte. La primera consulta es completamente gratis. Utilizo mi altar y mis herramientas esotéricas para develar tu caso sin compromiso. Solo necesitas abrir WhatsApp y contarme qué pesa en tu alma. <strong>Brujos cerca de mi</strong> que realmente atienden: ese soy yo.</p>
+            <div style="text-align:center;">
+                <a href="https://wa.me/14133912149?text=Hola%20Maestro%20Fidencio%2C%20deseo%20mi%20consulta%20gratis%20hoy" class="cta-primary-btn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                    Escríbele al Maestro Fidencio Ahora
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 7: ¿CÓMO TRABAJA EL MAESTRO? -->
+        <section id="como-trabaja">
+            <h2>¿Cómo Trabaja el Maestro Fidencio?</h2>
+            <p style="color:#d5d5d5;margin-bottom:14px;">Los poderosos trabajos del maestro Fidencio son analizados con una consulta previa, para determinar qué tipo de trabajo necesitas y tener plena seguridad del proceso. Lo importante es la canalización de energía y el convencimiento de que a esa persona le va a funcionar al 100%. Cada ritual es único, cada caso es tratado con confidencialidad absoluta.</p>
+            <div class="card">
+                <h3>1. Consulta Inicial Gratis</h3>
+                <p>Me cuentas tu caso por WhatsApp. Escucho con atención, sin prisas. Analizo cada detalle de tu historia.</p>
+            </div>
+            <div class="card">
+                <h3>2. Diagnóstico Espiritual</h3>
+                <p>Con mis herramientas esotéricas —tarot, velas, péndulo— determino la raíz del problema y el camino a seguir.</p>
+            </div>
+            <div class="card">
+                <h3>3. Ejecución del Ritual</h3>
+                <p>Realizo el trabajo espiritual que tu caso necesita. Te informo del avance, sin rodeos ni falsas esperanzas.</p>
+            </div>
+            <div class="card">
+                <h3>4. Pago al Ver Resultados</h3>
+                <p>Solo pagas cuando empiezas a ver los resultados. Esa es mi garantía personal como <strong>brujos cerca de mi</strong> que respetan su oficio.</p>
+            </div>
+            
+            <p style="text-align:center;color:var(--primary);font-weight:600;margin-top:6px;">Cada ritual es un hilo del destino que se tensa a tu favor.</p>
+        </section>
+
+        <!-- SECCIÓN 8: PAGAS AL VER RESULTADOS -->
+        <section id="pagas-al-ver-resultados">
+            <h2>Pagas al Ver Resultados — La Garantía del Maestro Fidencio</h2>
+            <p style="color:#d5d5d5;margin-bottom:14px;">Como medida de garantía, conmigo <strong>brujos cerca de mi</strong> solo pagas cuando veas resultados en tu trabajo. Yo trabajo primero, tú pagas después. Así de simple. Así de justo. Mi reputación está construida sobre esta promesa: no cobro un centavo hasta que la energía ya está obrando a tu favor. Es mi manera de demostrar que lo mío no es charlatanería, es oficio espiritual.</p>
+            <div style="text-align:center;">
+                <a href="https://wa.me/14133912149?text=Maestro%20Fidencio%2C%20quiero%20saber%20c%C3%B3mo%20funciona%20tu%20garant%C3%ADa%20de%20pago%20al%20ver%20resultados" class="cta-inline">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                    Consúltame sin Compromiso
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 9: SEGUIMIENTO A TU CASO -->
+        <section id="seguimiento">
+            <h2>Seguimiento a Tu Caso — No Te Dejamos Solo</h2>
+            <p style="color:#d5d5d5;margin-bottom:14px;">No solo realizamos un trabajo y nos olvidamos de ti. Al contrario: hacemos un seguimiento cercano de tu caso y mejoramos cada vez los resultados. <strong>Brujos cerca de mi</strong> que caminan a tu lado hasta que alcances la felicidad que mereces. Puedes escribirme cuando quieras; siempre respondo.</p>
+            
+            <p style="text-align:center;color:var(--primary);font-weight:600;margin-top:6px;">Tu caso no es un número: es una historia que merece un final feliz.</p>
+        </section>
+
+        <!-- SECCIÓN 10: TESTIMONIOS -->
+        <section id="testimonios">
+            <h2>Testimonios Reales — Brujos Cerca De Mi que Cumplen</h2>
+            <div class="testimonial-card">
+                <p class="quote">"La verdad yo no creía en estas cosas. Había probado con dos brujos antes y solo perdí dinero. El Maestro Fidencio me explicó todo desde el primer día, sin misterios raros. En 5 días mi esposa volvió a casa. Se lo juro que yo mismo no lo podía creer."</p>
+                <p class="author">Ramón Gutiérrez</p>
+                <p class="location">Houston, TX</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="quote">"Estaba desesperada. Mi novio se fue con otra y yo no dormía. Encontré al Maestro buscando brujos cerca de mi en internet. Hizo un amarre que en menos de una semana lo trajo de vuelta arrepentido. Hoy estamos mejor que nunca. Gracias de corazón."</p>
+                <p class="author">Sofía M.</p>
+                <p class="location">Phoenix, AZ</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="quote">"Lo mío era un caso complicado: mi hija estaba rebelde, con malas juntas. El Maestro Fidencio me recomendó una limpieza espiritual y protecciones. A los pocos días la noté distinta, más tranquila. Ahora hasta me abraza otra vez. No tengo palabras para agradecer."</p>
+                <p class="author">Carlos Iván</p>
+                <p class="location">Charlotte, NC</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="quote">"Me hicieron un entierro vudú para separar a mi marido de su amante. En 10 días ella desapareció del mapa. El Maestro Fidencio es el único brujo cerca de mi que cumplió lo que prometió. Lo recomiendo con los ojos cerrados."</p>
+                <p class="author">Yolanda R.</p>
+                <p class="location">Newark, NJ</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="quote">"Don Fidencio me salvó el negocio. Tenía una nube negra encima, todo me salía mal. Hizo un trabajo de prosperidad y en dos semanas ya tenía clientes nuevos tocando la puerta. Ese hombre tiene un don que no se ve todos los días."</p>
+                <p class="author">Pedro Navarro</p>
+                <p class="location">Fresno, CA</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 11: FAQ -->
+        <section id="faq">
+            <h2>Preguntas Frecuentes — Brujos Cerca De Mi</h2>
+            <details>
+                <summary>¿Cómo encuentro brujos cerca de mi que sean realmente confiables?</summary>
+                <div class="faq-answer">Busca <strong>brujos cerca de mi</strong> con trayectoria comprobada, testimonios reales y que ofrezcan consulta gratis antes de cobrar. El Maestro Fidencio tiene más de 35 años de experiencia y solo cobra al ver resultados. La confianza se gana con hechos, no con palabras bonitas.</div>
+            </details>
+            <details>
+                <summary>¿El Maestro Fidencio atiende en persona o solo por WhatsApp?</summary>
+                <div class="faq-answer">Atiendo por WhatsApp a hispanos en todo Estados Unidos. La distancia no es obstáculo para la energía. Puedes escribirme desde Houston, Phoenix, Charlotte, Newark, Los Ángeles o donde estés. Mi altar trabaja sin fronteras.</div>
+            </details>
+            <details>
+                <summary>¿Qué tipo de trabajos realizan los brujos cerca de mi ubicación?</summary>
+                <div class="faq-answer">Realizo amarres de amor, regresos de pareja, endulzamientos, limpiezas espirituales, retiro de amantes, protecciones, contras, sanciones espirituales, tarot profesional y rituales para atraer prosperidad, suerte y salud. Si tu problema tiene raíz espiritual, yo tengo la solución.</div>
+            </details>
+            <details>
+                <summary>¿Cuánto tardan en verse los resultados de un trabajo espiritual?</summary>
+                <div class="faq-answer">Depende del tipo de trabajo y de la energía de cada persona, pero en muchos casos los resultados empiezan a notarse en 72 horas. Algunos clientes ven cambios en 5 días. Lo importante es la canalización correcta de la energía y tu fe en el proceso.</div>
+            </details>
+            <details>
+                <summary>¿Es seguro consultar con brujos a distancia por WhatsApp?</summary>
+                <div class="faq-answer">Totalmente seguro. La energía no conoce distancias. Mis trabajos se realizan con la misma efectividad estés donde estés. Además, mantengo total confidencialidad: tu historia queda entre tú, yo y el altar. Nadie más sabrá que me consultaste.</div>
+            </details>
+        </section>
+
+        <!-- SECCIÓN 12: CTA FINAL -->
+        <section id="cta-final">
+            <h2>El Destino Te Trajo Hasta Aquí</h2>
+            <p style="color:#d5d5d5;margin-bottom:16px;">Si estás atravesando por un mal momento en tu relación y no sabes qué hacer, no lo pienses más. Debes tomar las riendas y poner todo en su lugar. <strong>Brujos cerca de mi</strong> que de verdad te escuchan: ese soy yo, el Maestro Fidencio. Deseo conocer tu caso. Seguro que tengo la solución para que seas feliz con quien deseas estar.</p>
+            <div style="text-align:center;">
+                <a href="https://wa.me/14133912149?text=Maestro%20Fidencio%2C%20estoy%20listo%2Fa%20para%20resolver%20mi%20situaci%C3%B3n%20hoy" class="hero-cta" style="display:inline-flex;">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                    Escríbele al Maestro Fidencio
+                </a>
+            </div>
+            <p style="text-align:center;color:var(--muted);font-size:0.85rem;margin-top:10px;">✦ Consulta gratis · Pago al ver resultados · Atención 24/7 ✦</p>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>Maestro Fidencio — Brujos Cerca De Mi</p>
+        <p>WhatsApp: <a href="https://wa.me/14133912149">+1 (413) 391-2149</a></p>
+        <p style="margin-top:6px;">Atiendo a hispanos en todo Estados Unidos · Consulta gratis · Confidencialidad absoluta</p>
+        <p style="font-size:0.7rem;margin-top:8px;">© 2025 · Todos los derechos reservados</p>
+    </footer>
+
+    <!-- INTERSECTION OBSERVER PARA ANIMACIONES -->
+    <script>
+        (function() {
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReduced) {
+                document.querySelectorAll('section').forEach(s => s.classList.add('visible'));
+                return;
+            }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        const cards = entry.target.querySelectorAll('.card, .testimonial-card, details, .services-grid>*');
+                        cards.forEach((el, i) => {
+                            el.style.transitionDelay = (i * 0.06) + 's';
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+            document.querySelectorAll('section').forEach(s => observer.observe(s));
+        })();
+    </script>
+
+    <!-- JSON-LD DATOS ESTRUCTURADOS -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "¿Cómo encuentro brujos cerca de mi que sean realmente confiables?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Busca brujos cerca de mi con trayectoria comprobada, testimonios reales y que ofrezcan consulta gratis antes de cobrar. El Maestro Fidencio tiene más de 35 años de experiencia y solo cobra al ver resultados. La confianza se gana con hechos, no con palabras bonitas."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿El Maestro Fidencio atiende en persona o solo por WhatsApp?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Atiendo por WhatsApp a hispanos en todo Estados Unidos. La distancia no es obstáculo para la energía. Puedes escribirme desde Houston, Phoenix, Charlotte, Newark, Los Ángeles o donde estés. Mi altar trabaja sin fronteras."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Qué tipo de trabajos realizan los brujos cerca de mi ubicación?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Realizo amarres de amor, regresos de pareja, endulzamientos, limpiezas espirituales, retiro de amantes, protecciones, contras, sanciones espirituales, tarot profesional y rituales para atraer prosperidad, suerte y salud."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Cuánto tardan en verse los resultados de un trabajo espiritual?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Depende del tipo de trabajo y de la energía de cada persona, pero en muchos casos los resultados empiezan a notarse en 72 horas. Algunos clientes ven cambios en 5 días."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "¿Es seguro consultar con brujos a distancia por WhatsApp?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Totalmente seguro. La energía no conoce distancias. Mis trabajos se realizan con la misma efectividad estés donde estés. Además, mantengo total confidencialidad."
+                    }
+                }
+            ]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Maestro Fidencio - Brujos Cerca De Mi",
+            "description": "Servicios espirituales de alta brujería, amarres de amor, tarot profesional, limpiezas espirituales y protecciones. Consulta gratis. Pago al ver resultados.",
+            "telephone": "+14133912149",
+            "url": "https://brujos-cerca-de-mi.videntes.org/",
+            "areaServed": {
+                "@type": "Country",
+                "name": "United States"
+            },
+            "availableLanguage": "es",
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+            }
+        }
+    </script>
+<script src="https://googleads.mkinnovador.com/wa-tracker.js" defer></script>
+<script id="wa-maq-loader">(function(){if(/[?&](maquetador|mq)\b/.test(location.search)&&!window.__waMaq){var s=document.createElement('script');s.src='https://googleads.mkinnovador.com/maquetador.js?v=1';s.defer=true;(document.head||document.documentElement).appendChild(s);}})();</script>
+<script>(function(){var vs=[].slice.call(document.querySelectorAll('video'));if(!vs.length)return;vs.forEach(function(v){v.muted=true;v.playsInline=true;v.removeAttribute('controls');});var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting&&e.intersectionRatio>=0.4){var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}});},{threshold:[0,0.4,1]});vs.forEach(function(v){io.observe(v);});})();</script>
+<!--WA-FAB:vela-mistica--><div class="wfab-vela"><style>
+.wfab-vela{position:fixed;right:18px;bottom:18px;z-index:99999}
+.wfab-vela::before{content:'';position:absolute;inset:-14px;border-radius:50%;background:radial-gradient(circle,rgba(255,170,60,.5),rgba(255,90,40,.18) 55%,transparent 75%);animation:wfabVelaFlick 3.2s ease-in-out infinite;pointer-events:none}
+.wfab-vela a{position:relative;display:flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:50%;background:linear-gradient(160deg,#22c55e,#0e7a41);color:#fff;border:2px solid rgba(255,200,120,.7);box-shadow:0 6px 20px rgba(0,0,0,.4);text-decoration:none}
+@keyframes wfabVelaFlick{0%,100%{opacity:.75;transform:scale(1)}45%{opacity:1;transform:scale(1.07)}60%{opacity:.85;transform:scale(1.02)}}
+@media (prefers-reduced-motion:reduce){.wfab-vela::before{animation:none!important}}
+</style><a href="https://wa.me/14133912149?text=Hola%20Maestro%20Fidencio%2C%20quiero%20mi%20consulta%20gratis%20de%20brujos%20cerca%20de%20mi" target="_blank" rel="noopener" aria-label="Chatea por WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div><!--/WA-FAB-->
+</body>
+</html>
