@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Babalawo near me — Maestro Teodoro, consulta espiritual gratis por WhatsApp. Amarres, limpias y orientación con un babalawo experto disponible 24/7. Paga solo al ver resultados.">
+    <title>Babalawo Near Me · Maestro Teodoro · Consulta Espiritual Gratis 24/7</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --surface: rgba(255, 255, 255, .06);
+            --surface-hover: rgba(255, 255, 255, .10);
+            --text: #ffffff;
+            --text-soft: rgba(255, 255, 255, .82);
+            --text-muted: rgba(255, 255, 255, .58);
+            --cta: #25d366;
+            --cta-hover: #1fb855;
+            --accent: #ffff00;
+            --accent-glow: rgba(255, 255, 0, .28);
+            --radius-sm: 10px;
+            --radius-md: 20px;
+            --radius-lg: 50px;
+            --font-display: 'Cinzel', 'Cinzel Decorative', serif;
+            --font-body: 'Cinzel', serif;
+            --transition-fast: 0.2s ease;
+            --transition-smooth: 0.6s ease-out;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            min-height: 100svh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ── HEADER STICKY ── */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            background: rgba(0, 0, 0, .88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, .10);
+            padding: 10px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        header .brand {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: .95rem;
+            letter-spacing: .04em;
+            color: var(--text);
+            white-space: nowrap;
+        }
+        header .brand span {
+            color: var(--accent);
+        }
+        header .btn-wa-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: var(--cta);
+            color: #fff;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: .8rem;
+            text-decoration: none;
+            padding: 9px 16px;
+            border-radius: var(--radius-lg);
+            letter-spacing: .02em;
+            white-space: nowrap;
+            transition: background var(--transition-fast), transform var(--transition-fast);
+        }
+        header .btn-wa-header:hover,
+        header .btn-wa-header:active {
+            background: var(--cta-hover);
+            transform: translateY(-1px);
+        }
+        header .btn-wa-header svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 92svh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            padding: 24px 18px 40px;
+        }
+        .hero video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .hero .hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(180deg, rgba(0, 0, 0, .20), rgba(0, 0, 0, .72) 78%);
+            background-blend-mode: overlay;
+        }
+        .hero .hero-overlay-velo {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background: var(--cta);
+            opacity: .08;
+        }
+        .hero .hero-content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            max-width: 560px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .hero .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, .20);
+            border-radius: var(--radius-lg);
+            padding: 8px 16px;
+            font-size: .78rem;
+            font-weight: 500;
+            letter-spacing: .03em;
+            color: var(--text);
+            align-self: flex-start;
+            white-space: nowrap;
+        }
+        .hero h1 {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: clamp(2.3rem, 9vw, 3.6rem);
+            line-height: 1.05;
+            color: #fff;
+            text-shadow: 0 2px 14px rgba(0, 0, 0, .55);
+            letter-spacing: -.01em;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent);
+            text-shadow: 0 0 28px var(--accent-glow);
+        }
+        .hero .hero-sub {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, .85);
+            font-weight: 400;
+            letter-spacing: .02em;
+            line-height: 1.4;
+        }
+        .hero .btn-cta-hero {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            background: var(--cta);
+            color: #fff;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            padding: 16px 30px;
+            border-radius: var(--radius-lg);
+            letter-spacing: .04em;
+            box-shadow: 0 0 38px rgba(37, 211, 102, .32), 0 4px 18px rgba(0, 0, 0, .35);
+            animation: pulse-cta 2.5s infinite ease-in-out;
+            transition: background var(--transition-fast), transform var(--transition-fast);
+            align-self: flex-start;
+        }
+        .hero .btn-cta-hero:hover,
+        .hero .btn-cta-hero:active {
+            background: var(--cta-hover);
+            transform: translateY(-2px);
+            animation: none;
+        }
+        .hero .btn-cta-hero svg {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+        .hero .micro-confianza {
+            font-size: .78rem;
+            color: rgba(255, 255, 255, .68);
+            letter-spacing: .03em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .hero .scroll-arrow {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 4;
+            animation: bounce-arrow 2s infinite ease-in-out;
+            opacity: .7;
+        }
+        .hero .scroll-arrow svg {
+            width: 26px;
+            height: 26px;
+            stroke: #fff;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        @keyframes pulse-cta {
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 38px rgba(37, 211, 102, .32), 0 4px 18px rgba(0, 0, 0, .35);
+            }
+            50% {
+                transform: scale(1.035);
+                box-shadow: 0 0 54px rgba(37, 211, 102, .48), 0 6px 22px rgba(0, 0, 0, .40);
+            }
+        }
+        @keyframes bounce-arrow {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(8px);
+            }
+        }
+
+        /* ── REVEAL ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity var(--transition-smooth), transform var(--transition-smooth);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── SECTION ── */
+        section {
+            padding: 50px 18px;
+            position: relative;
+            z-index: 1;
+        }
+        section h2 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(1.5rem, 5vw, 2rem);
+            color: #fff;
+            letter-spacing: .03em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        section h2 span {
+            color: var(--accent);
+        }
+        section .section-intro {
+            text-align: center;
+            color: var(--text-soft);
+            font-size: .92rem;
+            max-width: 520px;
+            margin: 0 auto 28px;
+            letter-spacing: .02em;
+            line-height: 1.55;
+        }
+
+        /* ── TARJETAS ── */
+        .card {
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            padding: 24px 18px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, .40);
+            background: var(--surface-hover);
+        }
+        .card img,
+        .card video {
+            width: 100%;
+            height: auto;
+            max-height: 40vh;
+            aspect-ratio: 5/6;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            display: block;
+            margin: 0 auto 14px;
+            background: #0a0a0a;
+        }
+        .card video {
+            max-width: 380px;
+            aspect-ratio: 9/16;
+        }
+        .card h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.05rem;
+            letter-spacing: .03em;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+        .card p {
+            color: var(--text-soft);
+            font-size: .85rem;
+            letter-spacing: .02em;
+            line-height: 1.5;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+            section {
+                padding: 60px 32px;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            .hero {
+                padding: 32px 32px 48px;
+            }
+            .hero .hero-content {
+                max-width: 620px;
+            }
+            header {
+                padding: 10px 32px;
+            }
+        }
+
+        /* ── CTA BUTTONS ── */
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--cta);
+            color: #fff;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: .95rem;
+            text-decoration: none;
+            padding: 14px 26px;
+            border-radius: var(--radius-lg);
+            letter-spacing: .04em;
+            box-shadow: 0 0 22px rgba(37, 211, 102, .22);
+            transition: background var(--transition-fast), transform var(--transition-fast);
+            text-align: center;
+        }
+        .btn-wa:hover,
+        .btn-wa:active {
+            background: var(--cta-hover);
+            transform: translateY(-2px);
+        }
+        .btn-wa svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+        .btn-center {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* ── SOBRE EL MAESTRO ── */
+        .maestro-retrato {
+            width: 100%;
+            max-width: 340px;
+            aspect-ratio: 5/6;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            display: block;
+            margin: 0 auto 22px;
+            border: 2px solid rgba(255, 255, 255, .12);
+            background: #0a0a0a;
+            max-height: 42vh;
+        }
+
+        /* ── TESTIMONIOS ── */
+        .testimonio-card {
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            padding: 20px 16px;
+            border: 1px solid rgba(255, 255, 255, .06);
+            position: relative;
+        }
+        .testimonio-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 14px;
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            color: var(--accent);
+            opacity: .35;
+            line-height: 1;
+            pointer-events: none;
+        }
+        .testimonio-card .testimonio-texto {
+            font-size: .88rem;
+            color: var(--text-soft);
+            letter-spacing: .02em;
+            line-height: 1.55;
+            padding-top: 10px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .testimonio-card .testimonio-autor {
+            font-weight: 700;
+            font-size: .82rem;
+            color: #fff;
+            letter-spacing: .03em;
+        }
+        .testimonio-card .testimonio-ciudad {
+            font-size: .72rem;
+            color: var(--text-muted);
+            letter-spacing: .02em;
+        }
+        .testimonios-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        @media (min-width: 768px) {
+            .testimonios-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* ── FAQ ── */
+        details {
+            background: var(--surface);
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255, 255, 255, .07);
+            margin-bottom: 10px;
+            overflow: hidden;
+            transition: background var(--transition-fast);
+        }
+        details[open] {
+            background: var(--surface-hover);
+        }
+        summary {
+            padding: 15px 18px;
+            cursor: pointer;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: .9rem;
+            letter-spacing: .03em;
+            color: #fff;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            user-select: none;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary .arrow {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            transition: transform var(--transition-fast);
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 2.5;
+        }
+        details[open] summary .arrow {
+            transform: rotate(180deg);
+        }
+        details .faq-answer {
+            padding: 0 18px 16px;
+            color: var(--text-soft);
+            font-size: .84rem;
+            letter-spacing: .02em;
+            line-height: 1.5;
+        }
+
+        /* ── SECCIÓN GARANTÍA ── */
+        .garantia-box {
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 215, 0, .18);
+            padding: 28px 20px;
+            text-align: center;
+        }
+        .garantia-box .icono-garantia {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .garantia-box h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--accent);
+            letter-spacing: .04em;
+            margin-bottom: 8px;
+        }
+        .garantia-box p {
+            color: var(--text-soft);
+            font-size: .88rem;
+            letter-spacing: .02em;
+            line-height: 1.5;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            text-align: center;
+            padding: 28px 18px;
+            color: var(--text-muted);
+            font-size: .74rem;
+            letter-spacing: .03em;
+            border-top: 1px solid rgba(255, 255, 255, .06);
+        }
+
+        /* ── ÚTILES ── */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+    </style>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N88RGDQH');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16586320392"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16586320392');</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%236d28d9'/><text x='32' y='44' font-size='34' text-anchor='middle'>🔮</text></svg>">
+</head>
+<body>
+<script id="wa-slider-guard">(function(){if(window.__waSliderGuard)return;window.__waSliderGuard=1;var o=Element.prototype.scrollIntoView;Element.prototype.scrollIntoView=function(){var c=this.parentElement;while(c&&c!==document.body&&!(c.scrollWidth>c.clientWidth+8))c=c.parentElement;if(c&&c!==document.body){var cr=c.getBoundingClientRect(),er=this.getBoundingClientRect();c.scrollTo({left:c.scrollLeft+(er.left-cr.left)-(cr.width-er.width)/2,behavior:'smooth'});return}return o.apply(this,arguments)};})();</script>
+<script id="wa-touch-guard">(function(){if(window.__waTouchGuard)return;window.__waTouchGuard=1;var o=EventTarget.prototype.addEventListener;EventTarget.prototype.addEventListener=function(t,f,x){if(t==='touchmove'||t==='touchstart'){var p=(typeof x==='object'&&x)?x:{capture:x===true};if(p.passive!==true)x={capture:!!p.capture,once:!!p.once,passive:true};}return o.call(this,t,f,x);};addEventListener('DOMContentLoaded',function(){try{var els=document.body.querySelectorAll('*');for(var i=0;i<els.length;i++){var c=getComputedStyle(els[i]).touchAction;if(c==='none'||c==='pan-x'){els[i].style.touchAction='pan-x pan-y pinch-zoom';}}}catch(e){}});})();</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N88RGDQH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- ═══════════ HEADER STICKY ═══════════ -->
+    <header>
+        <div class="brand">Maestro <span>Teodoro</span></div>
+        <a href="https://wa.me/14133912149?text=Hola%20Maestro%20Teodoro%2C%20quiero%20mi%20consulta%20gratis%20de%20babalawo" class="btn-wa-header" aria-label="Chatear por WhatsApp con el Maestro Teodoro">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp
+        </a>
+    </header>
+
+    <!-- ═══════════ MAIN ═══════════ -->
+    <main>
+
+        <!-- ═══════════ HERO: VIDEO CINEMATOGRÁFICO ═══════════ -->
+        <section class="hero reveal" aria-label="Babalawo near me - Maestro Teodoro">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://storage.googleapis.com/brujeriaweb/cover.webp" aria-hidden="true">
+                <source src="https://storage.googleapis.com/brujeriaweb/video-testimonio.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="hero-overlay-velo" aria-hidden="true"></div>
+            <div class="hero-content">
+                <div class="badge">✦ Maestro disponible ahora</div>
+                <h1>Babalawo <em>Near Me</em> — El Destino Te Trajo Hasta Aquí</h1>
+                <p class="hero-sub">Consulta espiritual inmediata con el Maestro Teodoro. Donde otros fallan, la raíz africana responde. Sin importar la distancia ni el tiempo.</p>
+                <a href="https://wa.me/14133912149?text=Hola%20Maestro%20Teodoro%2C%20necesito%20consulta%20de%20babalawo%20near%20me%20urgente" class="btn-cta-hero">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                    Consulta Gratis Ahora
+                </a>
+                <p class="micro-confianza">⭐ 4.9 · +5.000 consultas · Respuesta inmediata</p>
+            </div>
+            <div class="scroll-arrow" aria-hidden="true">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+        </section>
+
+        <!-- ═══════════ SOBRE EL MAESTRO TEODORO ═══════════ -->
+        <section class="reveal" aria-labelledby="sobre-maestro">
+            <h2 id="sobre-maestro">Maestro <span>Teodoro</span> — Babalawo de Linaje Africano</h2>
+            
+            <div class="section-intro">
+                <p>Soy el <strong>Maestro Teodoro</strong>, babalawo consagrado con más de 35 años de práctica profunda en la tradición de Ifá. Heredé el don de mi padre y mi abuelo, ambos sacerdotes en tierras yorubas, y desde entonces he entregado mi vida a tender puentes entre el mundo visible y el invisible. Mi altar nunca ha estado frío ni mi voz ausente para quien clama desde la sombra.</p>
+                <p style="margin-top:12px;">He guiado a cientos de almas perdidas —hispano parlantes en todo Estados Unidos— a reencontrar el amor que creían muerto, a romper cadenas de mala suerte y a levantar protecciones que ningún mal traspasa. Si buscaste <em>babalawo near me</em>, el destino ya te puso frente a la puerta correcta. No hay distancia que el espíritu no recorra en un soplo.</p>
+                <p style="margin-top:8px;font-weight:600;color:var(--accent);">El primer paso ya lo diste al llegar aquí — termina de darlo.</p>
+            </div>
+            <div class="btn-center">
+                <a href="https://wa.me/14133912149?text=Maestro%20Teodoro%2C%20quiero%20hablar%20con%20un%20babalawo%20near%20me%20hoy%20mismo" class="btn-wa">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                    Escríbele al Maestro Teodoro
+                </a>
+            </div>
+        </section>
+
+        <!-- ═══════════ SERVICIOS: BABALAWO NEAR ME ═══════════ -->
+        <section class="reveal" aria-labelledby="servicios-babalawo">
+            <h2 id="servicios-babalawo">Babalawo <span>Near Me</span> — Soluciones Reales, Sin Engaños</h2>
+            <p class="section-intro">Cuando buscaste <em>babalawo near me</em> llegaste a un templo, no a un mostrador. Cada trabajo del Maestro Teodoro se hace con elementos consagrados, rezos antiguos y la presencia viva de los Orishas. No importa la edad, el sexo, el tiempo ni la distancia.</p>
+            <div class="grid-2">
+                <div class="card">
+                    <img src="https://babalawo-near-me.videntes.org/optimizado/ag-200183869644/banco-altar-esoterico-con-baphomet-y-ofrendas.webp" alt="Altar esotérico para consulta de babalawo near me" width="800" height="960" loading="lazy" decoding="async">
+                    <h3>Consulta de Babalawo Near Me</h3>
+                    <p>Lectura profunda con el oráculo de Ifá para despejar tu camino. Te revelo lo que nadie te ha dicho: quién te ata, quién te libera y qué ritual específico necesita tu caso. Sin diagnósticos vagos ni cuentos. La verdad del caracol no miente.</p>
+                </div>
+                <div class="card">
+                    
+                    <h3>Amarres de Amor</h3>
+                    <p>Atraigo y regreso a tu ser querido en 72 horas. Cruzo mente, cuerpo y espíritu dominando pensamiento y sentimiento hasta doblegar indiferencia, rebeldía, orgullo y retirar rivales. Donde otros han fracasado, yo triunfo. Sin daño alguno, sin vueltas atrás.</p>
+                </div>
+                <div class="card">
+                    
+                    <h3>Trabajos de Brujería y Limpias</h3>
+                    <p>Solución a toda clase de problemas: amor, suerte, dinero, salud, maleficios, enfermedades postizas, retiro de amantes, malas energías, posesiones, espíritus, salvamentos. Protecciones, contras y sanciones espirituales hechas con la fuerza de Ifá.</p>
+                </div>
+                <div class="card">
+                    
+                    <h3>Rituales Espirituales y Endulzamientos</h3>
+                    <p>Especialista en velas consagradas, hierbas mágicas y ceremonias que despiertan la pasión dormida. Cada ritual se prepara en luna propicia, con elementos que hablan directamente al espíritu de quien amas. La llama que enciendo no se apaga con el viento.</p>
+                </div>
+            </div>
+            <div class="btn-center" style="margin-top:24px;">
+                <a href="https://wa.me/14133912149?text=Maestro%20Teodoro%2C%20necesito%20un%20babalawo%20near%20me%20para%20consulta%20urgente" class="btn-wa">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                    Consulta Gratis por WhatsApp
+                </a>
+            </div>
+        </section>
+
+        <!-- ═══════════ VIDEO DEL MAESTRO ═══════════ -->
+        <section class="reveal" aria-labelledby="video-maestro">
+            <h2 id="video-maestro">Así Trabaja el <span>Maestro Teodoro</span></h2>
+            <p class="section-intro">Un vistazo real al altar donde cada noche enciendo velas por mis consultantes. Esto no es actuación: es el fuego que arde mientras tú duermes y yo tejo tu destino.</p>
+            <div style="max-width:380px;margin:0 auto;border-radius:var(--radius-md);overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.45);">
+                <video autoplay muted loop playsinline preload="metadata" poster="https://storage.googleapis.com/brujeriaweb/cover.webp" style="width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#0a0a0a;" aria-label="Video del Maestro Teodoro realizando un ritual">
+                    <source src="https://amarres-de-amor-gratis.brujero.org/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p style="text-align:center;margin-top:14px;color:var(--text-muted);font-size:.78rem;letter-spacing:.03em;">Ritual auténtico · Altar consagrado · Sin montajes</p>
+        </section>
+
+        <!-- ═══════════ CONSULTA GRATIS ═══════════ -->
+        <section class="reveal" aria-labelledby="consulta-gratis">
+            <h2 id="consulta-gratis">¡<span>Consulta Gratis</span> de Babalawo Near Me!</h2>
+            <p class="section-intro">¿Está buscando una solución para fortalecer su relación amorosa o encontrar a su alma gemela? ¿Ha intentado todo sin resultados satisfactorios? ¿Cree en la magia y en su poder para solucionar problemas en su vida amorosa? Si respondió sí a alguna de estas preguntas, entonces ha llegado al lugar correcto.</p>
+            <div class="grid-2">
+                <div class="card" style="text-align:center;">
+                    
+                    <h3>Chatea con el Maestro</h3>
+                    <p>Escucha directa, sin intermediarios. Tú me cuentas tu caso y yo te digo —con honestidad— si tiene remedio. La consulta no te cuesta nada. La solución, tampoco tiene precio.</p>
+                </div>
+                <div class="card" style="text-align:center;">
+                    
+                    <h3>Especialista en Amarres y Rituales</h3>
+                    <p>Velas, hierbas, rezos ancestrales y la bendición de los Orishas se unen en cada trabajo. No hay caso pequeño ni amor imposible cuando el espíritu camina de tu lado.</p>
+                </div>
+            </div>
+            <div class="btn-center">
+                <a href="https://wa.me/14133912149?text=Hola%20Maestro%20Teodoro%2C%20vengo%20por%20la%20consulta%20gratis%20de%20babalawo%20near%20me" class="btn-wa">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                    Consulta Gratis Ahora
+                </a>
+            </div>
+        </section>
+
+        <!-- ═══════════ PAGA AL VER RESULTADOS ═══════════ -->
+        <section class="reveal" aria-labelledby="paga-resultados">
+            <h2 id="paga-resultados">Paga al <span>Ver Resultados</span></h2>
+            <div class="garantia-box">
+                <span class="icono-garantia" aria-hidden="true">🛡️</span>
+                <h3>Yo Trabajo, Después Usted Paga</h3>
+                <p>Como medida de garantía, el <strong>Maestro Teodoro</strong> solo cobra cuando usted vea resultados reales en su caso. Primero enciendo las velas, invoco a los Orishas y muevo los hilos del destino. Cuando el cambio se manifieste —y se manifestará—, entonces hablamos de honorarios. Así de simple, así de justo. En un mundo lleno de charlatanes, esta es mi palabra de hierro.</p>
+            </div>
+            <div class="btn-center">
+                <a href="https://wa.me/14133912149?text=Maestro%20Teodoro%2C%20quiero%20saber%20m%C3%A1s%20sobre%20pagar%20al%20ver%20resultados%20con%20babalawo%20near%20me" class="btn-wa">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                    Habla con el Maestro Teodoro
+                </a>
+            </div>
+        </section>
+
+        <!-- ═══════════ VIDEO TESTIMONIAL ═══════════ -->
+        <section class="reveal" aria-labelledby="video-testimonio">
+            <h2 id="video-testimonio">Testimonio en <span>Video Real</span></h2>
+            <p class="section-intro">Miles de consultantes han pasado por el altar del Maestro Teodoro. Aquí una muestra de lo que sucede cuando el espíritu responde.</p>
+            <div style="max-width:380px;margin:0 auto;border-radius:var(--radius-md);overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.45);">
+                <video autoplay muted loop playsinline preload="metadata" poster="https://storage.googleapis.com/brujeriaweb/cover.webp" style="width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#0a0a0a;" aria-label="Video testimonio de cliente satisfecho con babalawo near me">
+                    <source src="https://storage.googleapis.com/brujeriaweb/videogif22.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p style="text-align:center;margin-top:14px;color:var(--text-muted);font-size:.78rem;letter-spacing:.03em;">Historias reales · Gente real · Resultados reales</p>
+        </section>
+
+        <!-- ═══════════ TESTIMONIOS ═══════════ -->
+        <section class="reveal" aria-labelledby="testimonios">
+            <h2 id="testimonios">Lo Que Dicen Quienes Ya <span>Consultaron al Babalawo</span></h2>
+            <p class="section-intro">Cada testimonio es un alma que salió de la sombra. Lee despacio: el próximo podría ser el tuyo.</p>
+            <div class="testimonios-grid">
+                <div class="testimonio-card">
+                    <p class="testimonio-texto">La verdad yo no creía en estas cosas. Una amiga me insistió tanto que al final escribí al Maestro Teodoro. A los 5 días de su trabajo mi ex me llamó llorando pidiendo volver. Yo quedé en shock. Gracias, maestro, de corazón.</p>
+                    <p class="testimonio-autor">Yolanda R.</p>
+                    <p class="testimonio-ciudad">Phoenix, AZ</p>
+                </div>
+                <div class="testimonio-card">
+                    <p class="testimonio-texto">En medio de tantos brujos falsos que hay por internet, este sí que es de verdad. Me mostró evidencia de todo el trabajo y además el resultado fue rapidísimo. Hice un amarre que en 7 días tuvo un efecto muy fuerte. Se lo juro que funciona.</p>
+                    <p class="testimonio-autor">Ramón Castillo</p>
+                    <p class="testimonio-ciudad">Charlotte, NC</p>
+                </div>
+                <div class="testimonio-card">
+                    <p class="testimonio-texto">Siempre busqué babalawos cerca de mí, pero ninguno me sirvió hasta que di con el Maestro Teodoro. Su consulta me abrió los ojos y su trabajo me devolvió la paz que había perdido hace años.</p>
+                    <p class="testimonio-autor">Sandra M.</p>
+                    <p class="testimonio-ciudad">El Paso, TX</p>
+                </div>
+                <div class="testimonio-card">
+                    <p class="testimonio-texto">Ya van tres trabajos que hago con el maestro y siempre cumple. Me salvó de una mala racha espantosa y ahora hasta mis amigas lo consultan. Gracias por ser esa persona que ayuda siempre cuando uno más lo necesita.</p>
+                    <p class="testimonio-autor">Lucía Fernández</p>
+                    <p class="testimonio-ciudad">Fresno, CA</p>
+                </div>
+                <div class="testimonio-card">
+                    <p class="testimonio-texto">Si no quieren perder su dinero con charlatanes, les recomiendo al Maestro Teodoro. Siempre tiene una solución para lo que te atormenta. Nunca me dijo "no se puede". Sus trabajos son muy bien hechos y se nota la seriedad.</p>
+                    <p class="testimonio-autor">Diego H.</p>
+                    <p class="testimonio-ciudad">Newark, NJ</p>
+                </div>
+            </div>
+            <div class="btn-center">
+                <a href="https://wa.me/14133912149?text=Maestro%20Teodoro%2C%20vi%20los%20testimonios%20y%20quiero%20mi%20consulta%20de%20babalawo%20near%20me" class="btn-wa">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                    Quiero Mi Consulta Gratis
+                </a>
+            </div>
+        </section>
+
+        <!-- ═══════════ FAQ ═══════════ -->
+        <section class="reveal" aria-labelledby="faq">
+            <h2 id="faq">Preguntas Frecuentes sobre <span>Babalawo Near Me</span></h2>
+            <div style="max-width:600px;margin:0 auto;">
+                <details>
+                    <summary>
+                        ¿Qué es un babalawo y cómo puede ayudarme cerca de mí?
+                        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </summary>
+                    <p class="faq-answer">Un babalawo es un sacerdote iniciado en la tradición de Ifá, el sistema oracular yoruba. El Maestro Teodoro usa el oráculo sagrado para leer tu destino, identificar bloqueos espirituales y recetar el ritual exacto que tu caso necesita. No importa si estás en Houston, Phoenix o Miami: la consulta por WhatsApp es igual de poderosa que en persona, porque el espíritu no conoce distancias.</p>
+                </details>
+                <details>
+                    <summary>
+                        ¿Cómo encuentro un babalawo near me de confianza?
+                        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </summary>
+                    <p class="faq-answer">Buscar "babalawo near me" en internet puede llevarte a charlatanes. La diferencia está en la transparencia: el Maestro Teodoro te ofrece consulta gratis, pago solo al ver resultados y evidencia real de cada trabajo. Más de 35 años de trayectoria y cientos de testimonios lo respaldan. No pidas fe ciega: pide señales, y las tendrás.</p>
+                </details>
+                <details>
+                    <summary>
+                        ¿El Maestro Teodoro atiende urgencias 24/7?
+                        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </summary>
+                    <p class="faq-answer">Sí. El altar del Maestro Teodoro nunca duerme. Si tu caso es urgente —una separación inminente, un rival que acecha, una mala racha que no da tregua— escríbele ahora mismo por WhatsApp. La respuesta es inmediata y el primer diagnóstico no te cuesta nada. La llama se enciende en el momento justo, no cuando "haya turno".</p>
+                </details>
+                <details>
+                    <summary>
+                        ¿Qué tipo de problemas resuelve un babalawo?
+                        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </summary>
+                    <p class="faq-answer">Amor (amarres, endulzamientos, retorno de pareja), dinero (apertura de caminos, prosperidad), salud (limpias energéticas, retiro de maleficios), protección (contra envidias, rivales y espíritus oscuros) y orientación espiritual profunda. Si tu problema tiene raíz en el mundo invisible, un babalawo auténtico puede sanarlo desde la raíz.</p>
+                </details>
+                <details>
+                    <summary>
+                        ¿Cómo sé que el trabajo de babalawo near me está funcionando?
+                        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </summary>
+                    <p class="faq-answer">El Maestro Teodoro te entrega evidencia visual de cada ritual: fotos de las velas consumidas, del altar preparado, de los elementos consagrados. Además, notarás señales en tu día a día: sueños vívidos, coincidencias, una sensación de ligereza o el movimiento repentino de la persona amada. Los resultados hablan solos, y solo entonces pagas.</p>
+                </details>
+                <details>
+                    <summary>
+                        ¿El Maestro Teodoro hace trabajos a distancia?
+                        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </summary>
+                    <p class="faq-answer">Por supuesto. La energía no entiende de kilómetros. El Maestro Teodoro ha realizado trabajos exitosos para consultantes en todos los rincones de Estados Unidos y más allá. Solo necesita tu nombre, fecha de nacimiento y una foto (si la tienes) para conectar con tu espíritu. El resto lo hace el ritual, que viaja más rápido que cualquier avión.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- ═══════════ CTA FINAL ═══════════ -->
+        <section class="reveal" aria-label="CTA final">
+            <div style="text-align:center;max-width:500px;margin:0 auto;">
+                <h2 style="font-size:1.6rem;margin-bottom:12px;">El Destino Te <span>Trajo Hasta Aquí</span></h2>
+                <p style="color:var(--text-soft);font-size:.9rem;letter-spacing:.02em;line-height:1.5;margin-bottom:20px;">No fue el azar. Si buscaste <em>babalawo near me</em> y llegaste a esta página, es porque alguien del otro lado ya estaba moviendo los hilos. Da el paso. La consulta es gratis. La paz que ganas, invaluable.</p>
+                <a href="https://wa.me/14133912149?text=Maestro%20Teodoro%2C%20estoy%20listo%20para%20mi%20consulta%20de%20babalawo%20near%20me" class="btn-wa" style="font-size:1.05rem;padding:16px 32px;">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" style="width:22px;height:22px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                    Escríbele al Maestro Teodoro Ahora
+                </a>
+                <p style="margin-top:12px;color:var(--text-muted);font-size:.72rem;letter-spacing:.04em;">Respuesta inmediata · 24/7 · Confidencialidad absoluta</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer>
+        <p>© 2025 Maestro Teodoro — Babalawo Near Me · Consulta Espiritual · Todos los derechos reservados.</p>
+        <p style="margin-top:4px;">WhatsApp exclusivo: +1 (413) 391-2149 · Atención en español para Estados Unidos.</p>
+    </footer>
+
+    <!-- ═══════════ SCRIPTS: REVEAL + REDUCED MOTION ═══════════ -->
+    <script>
+        (function() {
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+            document.querySelectorAll('.reveal').forEach(el => {
+                if (reducedMotion) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'none';
+                    el.classList.add('visible');
+                } else {
+                    observer.observe(el);
+                }
+            });
+            // Stagger sibling cards inside .reveal
+            document.querySelectorAll('.reveal .card, .reveal .testimonio-card, .reveal .garantia-box').forEach((card, i) => {
+                if (!reducedMotion) {
+                    card.style.transitionDelay = (i % 4) * 0.06 + 's';
+                }
+            });
+        })();
+    </script>
+
+    <!-- ═══════════ JSON-LD STRUCTURED DATA ═══════════ -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "¿Qué es un babalawo y cómo puede ayudarme cerca de mí?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Un babalawo es un sacerdote iniciado en la tradición de Ifá, el sistema oracular yoruba. El Maestro Teodoro usa el oráculo sagrado para leer tu destino, identificar bloqueos espirituales y recetar el ritual exacto que tu caso necesita. No importa si estás en Houston, Phoenix o Miami: la consulta por WhatsApp es igual de poderosa que en persona, porque el espíritu no conoce distancias."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿Cómo encuentro un babalawo near me de confianza?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Buscar 'babalawo near me' en internet puede llevarte a charlatanes. La diferencia está en la transparencia: el Maestro Teodoro te ofrece consulta gratis, pago solo al ver resultados y evidencia real de cada trabajo. Más de 35 años de trayectoria y cientos de testimonios lo respaldan."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿El Maestro Teodoro atiende urgencias 24/7?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. El altar del Maestro Teodoro nunca duerme. Si tu caso es urgente —una separación inminente, un rival que acecha, una mala racha que no da tregua— escríbele ahora mismo por WhatsApp. La respuesta es inmediata y el primer diagnóstico no te cuesta nada."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿Qué tipo de problemas resuelve un babalawo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Amor (amarres, endulzamientos, retorno de pareja), dinero (apertura de caminos, prosperidad), salud (limpias energéticas, retiro de maleficios), protección (contra envidias, rivales y espíritus oscuros) y orientación espiritual profunda."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿Cómo sé que el trabajo de babalawo near me está funcionando?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El Maestro Teodoro te entrega evidencia visual de cada ritual: fotos de las velas consumidas, del altar preparado, de los elementos consagrados. Además notarás señales en tu día a día: sueños vívidos, coincidencias, o el movimiento repentino de la persona amada. Solo entonces pagas."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿El Maestro Teodoro hace trabajos a distancia?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Por supuesto. La energía no entiende de kilómetros. El Maestro Teodoro ha realizado trabajos exitosos para consultantes en todos los rincones de Estados Unidos. Solo necesita tu nombre, fecha de nacimiento y una foto para conectar con tu espíritu."
+                }
+            }]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Babalawo Near Me - Maestro Teodoro",
+            "description": "Consulta espiritual con babalawo experto. Amarres de amor, limpias, protecciones y orientación con Ifá. Consulta gratis por WhatsApp. Paga solo al ver resultados.",
+            "provider": {
+                "@type": "Person",
+                "name": "Maestro Teodoro",
+                "jobTitle": "Babalawo",
+                "telephone": "+14133912149",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "US"
+                }
+            },
+            "areaServed": {
+                "@type": "Country",
+                "name": "United States"
+            },
+            "availableLanguage": ["es"],
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "description": "Consulta gratis inicial"
+            }
+        }
+    </script>
+<script src="https://googleads.mkinnovador.com/wa-tracker.js" defer></script>
+<script id="wa-maq-loader">(function(){if(/[?&](maquetador|mq)\b/.test(location.search)&&!window.__waMaq){var s=document.createElement('script');s.src='https://googleads.mkinnovador.com/maquetador.js?v=1';s.defer=true;(document.head||document.documentElement).appendChild(s);}})();</script>
+<!--WA-FAB:vela-mistica--><div class="wfab-vela"><style>
+.wfab-vela{position:fixed;right:18px;bottom:18px;z-index:99999}
+.wfab-vela::before{content:'';position:absolute;inset:-14px;border-radius:50%;background:radial-gradient(circle,rgba(255,170,60,.5),rgba(255,90,40,.18) 55%,transparent 75%);animation:wfabVelaFlick 3.2s ease-in-out infinite;pointer-events:none}
+.wfab-vela a{position:relative;display:flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:50%;background:linear-gradient(160deg,#22c55e,#0e7a41);color:#fff;border:2px solid rgba(255,200,120,.7);box-shadow:0 6px 20px rgba(0,0,0,.4);text-decoration:none}
+@keyframes wfabVelaFlick{0%,100%{opacity:.75;transform:scale(1)}45%{opacity:1;transform:scale(1.07)}60%{opacity:.85;transform:scale(1.02)}}
+@media (prefers-reduced-motion:reduce){.wfab-vela::before{animation:none!important}}
+</style><a href="https://wa.me/14133912149?text=Hola%20Maestro%20Teodoro%2C%20quiero%20mi%20consulta%20gratis%20de%20babalawo" target="_blank" rel="noopener" aria-label="Chatea por WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div><!--/WA-FAB-->
+<script id="kz-video-io">(function(){var vs=[].slice.call(document.querySelectorAll('video'));if(!vs.length)return;vs.forEach(function(v){v.muted=true;v.defaultMuted=true;v.playsInline=true;v.setAttribute('playsinline','');v.setAttribute('webkit-playsinline','');v.removeAttribute('controls');});function tryPlay(v){var p=v.play();if(p&&p.catch)p.catch(function(){});}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&e.intersectionRatio>=0.4){tryPlay(e.target);}else{e.target.pause();}});},{threshold:[0,0.4,1]});vs.forEach(function(v){io.observe(v);});function kick(){vs.forEach(function(v){var r=v.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){if(v.readyState===0){try{v.load();}catch(err){}}tryPlay(v);}});}['touchstart','click','scroll'].forEach(function(ev){addEventListener(ev,function h(){kick();removeEventListener(ev,h);},{passive:true});});setTimeout(kick,400);})();</script>
+</body>
+</html>
