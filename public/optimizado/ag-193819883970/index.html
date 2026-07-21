@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amarres de amor caseros con el Maestro Belisario. Consulta gratis, paga al ver resultados. Brujería experta para atraer y regresar al ser querido. Atención 24/7 por WhatsApp.">
+    <title>Amarres de Amor Caseros — Maestro Belisario | Consulta Gratis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --surface: rgba(255, 255, 255, .06);
+            --surface-hover: rgba(255, 255, 255, .10);
+            --text: #ffffff;
+            --text-muted: rgba(255, 255, 255, .78);
+            --cta: #25d366;
+            --cta-hover: #20bd5a;
+            --accent: #ffff00;
+            --radius-sm: 10px;
+            --radius-pill: 50px;
+            --font-display: 'Cinzel', serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: var(--font-display);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100svh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-weight: 400;
+            letter-spacing: .02em;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* HEADER STICKY */
+        .header-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            background: rgba(0, 0, 0, .88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255, 255, 255, .12);
+            padding: 0 16px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .header-sticky .brand {
+            font-weight: 700;
+            font-size: .95rem;
+            color: var(--text);
+            white-space: nowrap;
+            letter-spacing: .04em;
+        }
+        .header-sticky .brand span {
+            color: var(--accent);
+        }
+        .header-sticky .btn-wa-sm {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--cta);
+            color: #fff;
+            text-decoration: none;
+            padding: 7px 14px;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+            font-size: .8rem;
+            letter-spacing: .03em;
+            white-space: nowrap;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .header-sticky .btn-wa-sm:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+        }
+        .header-sticky .btn-wa-sm svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            min-height: 92svh;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px 16px 36px;
+        }
+        .hero .bg-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .hero .overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(180deg, rgba(0, 0, 0, .20) 0%, rgba(0, 0, 0, .72) 78%);
+        }
+        .hero .overlay-tint {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: rgba(37, 211, 102, .07);
+        }
+        .hero .content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+        .hero .badge {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: var(--radius-pill);
+            background: rgba(255, 255, 255, .12);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, .20);
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: .05em;
+            color: #fff;
+            opacity: 0;
+            animation: fadeUp .6s ease-out forwards;
+            animation-delay: 0s;
+        }
+        .hero h1 {
+            font-size: clamp(2.3rem, 9vw, 3.6rem);
+            font-weight: 800;
+            line-height: 1.05;
+            color: #fff;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, .6);
+            letter-spacing: .01em;
+            opacity: 0;
+            animation: fadeUp .6s ease-out forwards;
+            animation-delay: .2s;
+        }
+        .hero .subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, .85);
+            font-weight: 400;
+            letter-spacing: .03em;
+            max-width: 340px;
+            opacity: 0;
+            animation: fadeUp .6s ease-out forwards;
+            animation-delay: .4s;
+        }
+        .hero .btn-cta-xl {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cta);
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 32px;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: .03em;
+            box-shadow: 0 0 28px rgba(37, 211, 102, .30);
+            animation: pulseCta 2.5s infinite, fadeUp .6s ease-out forwards;
+            animation-delay: .6s;
+            opacity: 0;
+            transition: transform .2s;
+        }
+        .hero .btn-cta-xl:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 36px rgba(37, 211, 102, .45);
+        }
+        .hero .btn-cta-xl svg {
+            width: 22px;
+            height: 22px;
+        }
+        .hero .trust-micro {
+            font-size: .75rem;
+            color: rgba(255, 255, 255, .7);
+            letter-spacing: .04em;
+            opacity: 0;
+            animation: fadeUp .6s ease-out forwards;
+            animation-delay: .8s;
+        }
+        .hero .scroll-arrow {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            opacity: .7;
+            animation: bounceArrow 2s infinite;
+        }
+        .hero .scroll-arrow svg {
+            width: 26px;
+            height: 26px;
+            stroke: #fff;
+            fill: none;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes pulseCta {
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 28px rgba(37, 211, 102, .30);
+            }
+            50% {
+                transform: scale(1.04);
+                box-shadow: 0 0 40px rgba(37, 211, 102, .50);
+            }
+        }
+        @keyframes bounceArrow {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(8px);
+            }
+        }
+
+        /* SECTION BASE */
+        section {
+            padding: 48px 16px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        section h2 {
+            font-size: 1.55rem;
+            font-weight: 700;
+            letter-spacing: .03em;
+            margin-bottom: 16px;
+            color: #fff;
+            text-align: center;
+        }
+        section h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            letter-spacing: .03em;
+            margin-bottom: 8px;
+            color: var(--accent);
+        }
+        section p {
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-size: .93rem;
+            letter-spacing: .02em;
+        }
+
+        /* CARDS */
+        .card {
+            background: var(--surface);
+            border-radius: var(--radius-sm);
+            padding: 20px 18px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            transition: transform .2s, box-shadow .2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, .5);
+        }
+        .card img {
+            width: 100%;
+            max-height: 45vh;
+            aspect-ratio: 5/6;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        /* REVEAL ANIMATION */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .6s ease-out, transform .6s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal:nth-child(1) {
+            transition-delay: .05s;
+        }
+        .reveal:nth-child(2) {
+            transition-delay: .1s;
+        }
+        .reveal:nth-child(3) {
+            transition-delay: .15s;
+        }
+        .reveal:nth-child(4) {
+            transition-delay: .20s;
+        }
+        .reveal:nth-child(5) {
+            transition-delay: .25s;
+        }
+
+        /* BTN CTA GENERAL */
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: var(--cta);
+            color: #fff;
+            text-decoration: none;
+            padding: 13px 26px;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+            font-size: .95rem;
+            letter-spacing: .03em;
+            transition: transform .2s, box-shadow .2s;
+            white-space: nowrap;
+        }
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 22px rgba(37, 211, 102, .38);
+        }
+        .btn-cta svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .cta-center {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* TESTIMONIALS */
+        .testimonial-card {
+            background: var(--surface);
+            border-radius: var(--radius-sm);
+            padding: 18px 16px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(255, 255, 255, .06);
+            position: relative;
+        }
+        .testimonial-card .quote-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 6px;
+            opacity: .8;
+        }
+        .testimonial-card p {
+            font-size: .9rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-style: italic;
+            letter-spacing: .01em;
+        }
+        .testimonial-card .author {
+            font-weight: 700;
+            font-size: .85rem;
+            color: #fff;
+            letter-spacing: .03em;
+        }
+        .testimonial-card .meta {
+            font-size: .72rem;
+            color: rgba(255, 255, 255, .5);
+            letter-spacing: .04em;
+        }
+
+        /* FAQ */
+        details {
+            background: var(--surface);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255, 255, 255, .07);
+            cursor: pointer;
+            transition: background .2s;
+        }
+        details:hover {
+            background: var(--surface-hover);
+        }
+        details summary {
+            font-weight: 700;
+            font-size: .95rem;
+            letter-spacing: .03em;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details .arrow {
+            transition: transform .3s ease;
+            display: inline-block;
+            flex-shrink: 0;
+            margin-left: 8px;
+        }
+        details[open] .arrow {
+            transform: rotate(180deg);
+        }
+        details .answer {
+            margin-top: 10px;
+            font-size: .88rem;
+            color: var(--text-muted);
+            letter-spacing: .02em;
+            line-height: 1.5;
+        }
+
+        /* FOOTER */
+        .footer-cta {
+            text-align: center;
+            padding: 40px 16px 50px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .footer-cta h2 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: .03em;
+        }
+        .footer-cta p {
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            font-size: .9rem;
+        }
+        .footer-bottom {
+            text-align: center;
+            font-size: .7rem;
+            color: rgba(255, 255, 255, .35);
+            padding: 16px;
+            letter-spacing: .05em;
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* MEDIA QUERIES */
+        @media (min-width: 768px) {
+            section,
+            .footer-cta,
+            .footer-bottom {
+                max-width: 640px;
+            }
+            .hero .content {
+                max-width: 560px;
+            }
+            .card-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+            .card-grid .card {
+                margin-bottom: 0;
+            }
+            .testimonial-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+            }
+            .testimonial-grid .testimonial-card {
+                margin-bottom: 0;
+            }
+            .header-sticky {
+                padding: 0 24px;
+            }
+        }
+        @media (min-width: 1024px) {
+            section,
+            .footer-cta,
+            .footer-bottom {
+                max-width: 780px;
+            }
+            .hero .content {
+                max-width: 600px;
+            }
+            .card-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "¿Qué son los amarres de amor caseros y cómo funcionan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Los amarres de amor caseros son rituales espirituales que buscan unir o reconciliar a dos personas mediante energías naturales, velas, hierbas y oraciones. El Maestro Belisario trabaja con saberes heredados de su linaje ancestral para canalizar estas energías y fortalecer el vínculo amoroso."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿Cuánto tardan en verse resultados con un amarre de amor casero?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cada caso es único. Algunas personas notan cambios en pocos días; otras requieren más tiempo según la complejidad de la situación. El Maestro Belisario evalúa cada caso en consulta gratuita y orienta con honestidad sobre los tiempos probables."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿Es seguro un amarre de amor casero? ¿Tiene efectos secundarios?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cuando se realiza con un maestro experimentado como Belisario, los amarres de amor caseros se trabajan con energía blanca y sin causar daño a ninguna de las partes. El linaje del Maestro prioriza siempre el bienestar espiritual de todos los involucrados."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿Puedo hacer un amarre de amor casero yo mismo sin un brujo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Aunque existen rituales sencillos que algunas personas intentan en casa, la efectividad real depende de la canalización energética y el conocimiento profundo que solo un maestro con décadas de práctica —como Belisario— puede ofrecer. Una mala ejecución puede no dar resultado o incluso generar desequilibrios."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿El Maestro Belisario ofrece consulta gratis para amarres de amor caseros?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. El Maestro Belisario ofrece una primera consulta sin costo por WhatsApp al 12146138213. En ella escucha tu caso, analiza la situación y te orienta sobre el camino espiritual más adecuado antes de cualquier compromiso."
+                }
+            }]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Amarres de Amor Caseros — Maestro Belisario",
+            "description": "Servicios de amarres de amor caseros con el Maestro Belisario. Brujería experta, consulta gratis y pago al ver resultados. Atención por WhatsApp 24/7.",
+            "provider": {
+                "@type": "Person",
+                "name": "Maestro Belisario",
+                "description": "Brujo experto con más de 35 años de experiencia en amarres de amor, rituales espirituales y brujería ancestral."
+            },
+            "areaServed": {
+                "@type": "Country",
+                "name": "Estados Unidos"
+            },
+            "availableChannel": {
+                "@type": "ServiceChannel",
+                "serviceUrl": "https://wa.me/12146138213",
+                "availableLanguage": "es"
+            }
+        }
+    </script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KGLT8DG');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11495571750"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-11495571750');gtag('config','AW-11034559801');gtag('config','AW-682101450');gtag('config','AW-16586320392');gtag('config','AW-16892054054');gtag('config','AW-16568918455');</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%236d28d9'/><text x='32' y='44' font-size='34' text-anchor='middle'>🔮</text></svg>">
+</head>
+<body>
+<script id="wa-slider-guard">(function(){if(window.__waSliderGuard)return;window.__waSliderGuard=1;var o=Element.prototype.scrollIntoView;Element.prototype.scrollIntoView=function(){var c=this.parentElement;while(c&&c!==document.body&&!(c.scrollWidth>c.clientWidth+8))c=c.parentElement;if(c&&c!==document.body){var cr=c.getBoundingClientRect(),er=this.getBoundingClientRect();c.scrollTo({left:c.scrollLeft+(er.left-cr.left)-(cr.width-er.width)/2,behavior:'smooth'});return}return o.apply(this,arguments)};})();</script>
+<script id="wa-touch-guard">(function(){if(window.__waTouchGuard)return;window.__waTouchGuard=1;var o=EventTarget.prototype.addEventListener;EventTarget.prototype.addEventListener=function(t,f,x){if(t==='touchmove'||t==='touchstart'){var p=(typeof x==='object'&&x)?x:{capture:x===true};if(p.passive!==true)x={capture:!!p.capture,once:!!p.once,passive:true};}return o.call(this,t,f,x);};addEventListener('DOMContentLoaded',function(){try{var els=document.body.querySelectorAll('*');for(var i=0;i<els.length;i++){var c=getComputedStyle(els[i]).touchAction;if(c==='none'||c==='pan-x'){els[i].style.touchAction='pan-x pan-y pinch-zoom';}}}catch(e){}});})();</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGLT8DG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- HEADER STICKY -->
+    <header class="header-sticky">
+        <div class="brand">Maestro <span>Belisario</span></div>
+        <a href="https://wa.me/12146138213?text=Hola%20Maestro%20Belisario%2C%20quiero%20consultar%20sobre%20amarres%20de%20amor%20caseros" class="btn-wa-sm" aria-label="Chatear por WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+        </a>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" aria-label="Amarres de amor caseros — Maestro Belisario">
+            <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="https://storage.googleapis.com/brujeriaweb/cover.webp">
+                <source src="https://storage.googleapis.com/brujeriaweb/video-testimonio.mp4" type="video/mp4">
+            </video>
+            <div class="overlay"></div>
+            <div class="overlay-tint"></div>
+            <div class="content">
+                <span class="badge">✦ Maestro disponible ahora</span>
+                <h1>Amarres de Amor Caseros</h1>
+                <p class="subtitle">Con el poder ancestral del Maestro Belisario — consulta gratis y paga solo al ver resultados</p>
+                <a href="https://wa.me/12146138213?text=Hola%20Maestro%20Belisario%2C%20quiero%20informaci%C3%B3n%20sobre%20amarres%20de%20amor%20caseros" class="btn-cta-xl">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Consulta Gratis por WhatsApp
+                </a>
+                <span class="trust-micro">⭐ 4.9 · +5.000 consultas · Respuesta inmediata</span>
+            </div>
+            <div class="scroll-arrow" aria-hidden="true">
+                <svg aria-hidden="true" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+        </section>
+
+        <!-- SOBRE EL MAESTRO -->
+        <section class="reveal" aria-labelledby="sobre-maestro">
+            <h2 id="sobre-maestro">El Maestro Belisario</h2>
+            <div class="card" style="text-align:center;">
+                
+                <p style="text-align:left;">Esto que hoy hago me lo enseñó mi abuela, y a ella la suya. Vengo de un linaje de curanderos y brujos que por generaciones han servido a su comunidad con los saberes antiguos. No hay mal de amor que el espíritu no pueda sanar cuando se le habla con respeto y con la energía correcta.</p>
+                <p style="text-align:left;">Llevo más de 35 años ayudando a personas de todo Estados Unidos con <strong>amarres de amor caseros</strong>, rituales de reconciliación y limpias espirituales. Mi compromiso es claro: usted paga solo cuando ve resultados. Porque la magia verdadera no se cobra por adelantado — se honra cuando el universo ya ha respondido.</p>
+                <div class="cta-center">
+                    <a href="https://wa.me/12146138213?text=Maestro%20Belisario%2C%20necesito%20su%20ayuda%20con%20un%20amarre%20de%20amor%20casero" class="btn-cta">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Escríbele al Maestro Belisario
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS: AMARRES DE AMOR CASEROS -->
+        <section class="reveal" aria-labelledby="servicios">
+            <h2 id="servicios">Amarres de Amor Caseros — Soluciones Reales</h2>
+            <p style="text-align:center;color:var(--text-muted);">El arte de los <strong>amarres de amor caseros</strong> no está en lo aparatoso del ritual, sino en la pureza de la intención y el conocimiento de las fuerzas que mueven el corazón humano.</p>
+            <div class="card-grid">
+                <div class="card reveal">
+                    <img src="https://amarres-de-amor-caseros.videntes.org/optimizado/ag-193819883970/banco-altar-esoterico-rojo-con-deidades.webp" width="800" height="960" alt="Amarres de amor caseros — ritual con velas y altar" loading="lazy" decoding="async">
+                    <h3>Amarres de Amor Caseros</h3>
+                    <p>Atraigo y regreso al ser querido en 72 horas sin importar edad, sexo, tiempo ni distancia. Cruzo mente, cuerpo y espíritu para dominar pensamiento y sentimiento, venciendo indiferencia, rebeldía y orgullo. Donde otros han fracasado, el Maestro Belisario triunfa.</p>
+                </div>
+                <div class="card reveal">
+                    
+                    <h3>Rituales Personalizados</h3>
+                    <p>Cada caso es único, como única es cada alma. Uso velas, hierbas mágicas y ceremonias ancestrales para potenciar cada conjuro, adaptándome a lo que su situación realmente necesita. No hay receta única — hay sabiduría aplicada a su dolor concreto.</p>
+                </div>
+                <div class="card reveal">
+                    
+                    <h3>Hechizos Efectivos</h3>
+                    <p>Especialista en quitar infidelidad, retirar amantes, eliminar malas energías y romper posesiones espirituales que bloquean su felicidad. Realizo protecciones, contras y sanciones espirituales con la fuerza de quien conoce el camino desde niño.</p>
+                </div>
+                <div class="card reveal">
+                    
+                    <h3>Rituales Espirituales</h3>
+                    <p>Solución a toda clase de problemas: amor, suerte, dinero, salud, maleficios, enfermedades postizas, malas energías y más. Hago protecciones y salvamentos espirituales para quienes sienten que algo oscuro les frena el camino.</p>
+                </div>
+            </div>
+            <div class="cta-center">
+                <a href="https://wa.me/12146138213?text=Maestro%20Belisario%2C%20quiero%20saber%20m%C3%A1s%20sobre%20sus%20amarres%20de%20amor%20caseros" class="btn-cta">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Consulta Gratis Ahora
+                </a>
+            </div>
+        </section>
+
+        <!-- VIDEO DEL MAESTRO / RITUAL -->
+        <section class="reveal" aria-labelledby="video-ritual">
+            <h2 id="video-ritual">Vea el Trabajo del Maestro</h2>
+            <p style="text-align:center;color:var(--text-muted);">Un vistazo real a la energía que se mueve durante un ritual de <strong>amarres de amor caseros</strong>.</p>
+            <div style="max-width:380px;margin:0 auto;border-radius:var(--radius-sm);overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.6);">
+                <video autoplay muted loop playsinline preload="metadata" poster="https://storage.googleapis.com/brujeriaweb/cover.webp" style="width:100%;aspect-ratio:9/16;object-fit:cover;display:block;">
+                    <source src="https://storage.googleapis.com/brujeriaweb/videogif22.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- CONSULTA GRATIS -->
+        <section class="reveal" aria-labelledby="consulta-gratis">
+            <h2 id="consulta-gratis">Consulta Gratis — Cuénteme Su Caso</h2>
+            <div class="card" style="text-align:center;">
+                
+                <p>¿Ha intentado todo sin resultado? ¿Cree en la magia y en su poder para sanar su vida amorosa? Si respondió sí, ha llegado al lugar correcto. Cuénteme su caso por WhatsApp; hay saberes antiguos para lo que le pasa. La primera consulta es gratis y sin compromiso — solo necesita abrir su corazón y dejarse guiar.</p>
+                <p>Estoy disponible las 24 horas del día, los 7 días de la semana. No importa la hora ni el lugar donde usted esté: siempre hay un momento para escuchar y orientar con honestidad.</p>
+                <div class="cta-center">
+                    <a href="https://wa.me/12146138213?text=Hola%20Maestro%20Belisario%2C%20quisiera%20una%20consulta%20gratis%20sobre%20amarres%20de%20amor%20caseros" class="btn-cta">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Consulta Gratis por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGA AL VER RESULTADOS -->
+        <section class="reveal" aria-labelledby="paga-resultados">
+            <h2 id="paga-resultados">Paga al Ver Resultados</h2>
+            <div class="card" style="text-align:center;border-left:3px solid var(--accent);">
+                <p style="font-size:1.1rem;font-weight:700;color:#fff;">Yo trabajo primero, usted paga después.</p>
+                <p>Como medida de garantía, el Maestro Belisario solo cobra cuando usted ya ha visto resultados en su caso. Así de simple. Porque la confianza no se exige — se gana con hechos. En medio de tantos falsos maestros que pululan por internet, esta es mi promesa: si no ve avances, no me debe nada.</p>
+                <div class="cta-center">
+                    <a href="https://wa.me/12146138213?text=Maestro%20Belisario%2C%20quiero%20empezar%20un%20amarre%20de%20amor%20casero%20con%20su%20garant%C3%ADa" class="btn-cta">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Empiece Ahora — Sin Riesgo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section class="reveal" aria-labelledby="testimonios">
+            <h2 id="testimonios">Lo Que Dicen Quienes Ya Confiaron</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <div class="quote-icon" aria-hidden="true">❝</div>
+                    <p>En medio de tantos brujos falsos que andan por internet, doy fe de que el Maestro Belisario sí es de verdad. Me mostró evidencia de todo el trabajo y los resultados fueron rapidísimos. Hice un amarre de amor casero con él y en 5 días mi pareja me buscó. Gracias de corazón.</p>
+                    <div class="author">Ramón Castillo</div>
+                    <div class="meta">15 de Agosto de 2021 · Phoenix, AZ</div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="quote-icon" aria-hidden="true">❝</div>
+                    <p>La verdad yo no creía mucho en estas cosas, se lo juro. Pero había buscado a varios brujos antes y ninguno me funcionó. Con el Maestro Belisario todo fue distinto desde la primera consulta. Me explicó todo con calma y a la semana ya vi cambios que no podía creer.</p>
+                    <div class="author">Lucía M.</div>
+                    <div class="meta">22 de Enero de 2023 · Orlando, FL</div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="quote-icon" aria-hidden="true">❝</div>
+                    <p>Después de tantas experiencias buenas con usted, Maestro, ya es hora de recomendarlo. Le he contado a mis amigas y a toda persona que necesite un trabajo espiritual serio. Gracias por estar siempre cuando lo necesito, sin un no por respuesta.</p>
+                    <div class="author">Teresa Figueroa</div>
+                    <div class="meta">15 de Febrero de 2021 · El Paso, TX</div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="quote-icon" aria-hidden="true">❝</div>
+                    <p>Si no quiere perder su dinero con charlatanes, escúcheme: el Maestro Belisario siempre tiene ayuda para lo que sea. No hay un "no" para lo que a uno lo atormenta. Sus trabajos están muy bien hechos y se nota que sabe lo que hace. Recomendadísimo.</p>
+                    <div class="author">Andrés V.</div>
+                    <div class="meta">15 de Junio de 2022 · Charlotte, NC</div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="quote-icon" aria-hidden="true">❝</div>
+                    <p>Tenía más de dos años separada y ya había perdido toda esperanza. Una amiga me habló del Maestro Belisario y decidí intentarlo una vez más. Hoy estamos juntos otra vez. No tengo palabras para agradecerle. Los amarres de amor caseros con él funcionan de verdad.</p>
+                    <div class="author">Carmen Delgado</div>
+                    <div class="meta">3 de Marzo de 2024 · Newark, NJ</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEO TESTIMONIO -->
+        <section class="reveal" aria-labelledby="video-testimonio">
+            <h2 id="video-testimonio">Testimonios Reales en Video</h2>
+            <p style="text-align:center;color:var(--text-muted);">Historias de personas reales que ya recuperaron su felicidad con los <strong>amarres de amor caseros</strong> del Maestro Belisario.</p>
+            <div style="max-width:380px;margin:0 auto;border-radius:var(--radius-sm);overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.6);">
+                <video autoplay muted loop playsinline preload="metadata" style="width:100%;aspect-ratio:9/16;object-fit:cover;display:block;">
+                    <source src="https://amarres-de-amor-gratis.brujero.org/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="reveal" aria-labelledby="faq">
+            <h2 id="faq">Preguntas Frecuentes sobre Amarres de Amor Caseros</h2>
+            <details>
+                <summary>¿Qué son los amarres de amor caseros y cómo funcionan?<span class="arrow" aria-hidden="true">▾</span></summary>
+                <div class="answer">Son rituales espirituales que buscan unir o reconciliar a dos personas mediante energías naturales, velas, hierbas y oraciones. El Maestro Belisario trabaja con saberes heredados de su linaje ancestral para canalizar estas energías y fortalecer el vínculo amoroso sin causar daño alguno.</div>
+            </details>
+            <details>
+                <summary>¿Cuánto tardan en verse resultados con un amarre de amor casero?<span class="arrow" aria-hidden="true">▾</span></summary>
+                <div class="answer">Cada caso es único. Algunas personas notan cambios en pocos días; otras requieren más tiempo según la complejidad de la situación. El Maestro Belisario evalúa cada caso en consulta gratuita y orienta con honestidad sobre los tiempos probables.</div>
+            </details>
+            <details>
+                <summary>¿Es seguro un amarre de amor casero? ¿Tiene efectos secundarios?<span class="arrow" aria-hidden="true">▾</span></summary>
+                <div class="answer">Cuando se realiza con un maestro experimentado como Belisario, los amarres de amor caseros se trabajan con energía blanca y sin causar daño a ninguna de las partes. El linaje del Maestro prioriza siempre el bienestar espiritual de todos los involucrados.</div>
+            </details>
+            <details>
+                <summary>¿Puedo hacer un amarre de amor casero yo mismo sin un brujo?<span class="arrow" aria-hidden="true">▾</span></summary>
+                <div class="answer">Aunque existen rituales sencillos que algunas personas intentan en casa, la efectividad real depende de la canalización energética y el conocimiento profundo que solo un maestro con décadas de práctica —como Belisario— puede ofrecer. Una mala ejecución puede no dar resultado o incluso generar desequilibrios.</div>
+            </details>
+            <details>
+                <summary>¿El Maestro Belisario ofrece consulta gratis para amarres de amor caseros?<span class="arrow" aria-hidden="true">▾</span></summary>
+                <div class="answer">Sí. El Maestro Belisario ofrece una primera consulta sin costo por WhatsApp al 12146138213. En ella escucha su caso, analiza la situación y le orienta sobre el camino espiritual más adecuado antes de cualquier compromiso. No hay prisa: la decisión es suya.</div>
+            </details>
+        </section>
+
+        <!-- CTA FINAL -->
+        <div class="footer-cta reveal">
+            <h2>¿Listo para Recuperar Su Amor?</h2>
+            <p>No deje pasar más tiempo. Los <strong>amarres de amor caseros</strong> del Maestro Belisario han ayudado a cientos de personas en todo Estados Unidos. La consulta es gratis y no pierde nada con intentarlo.</p>
+            <a href="https://wa.me/12146138213?text=Maestro%20Belisario%2C%20estoy%20listo%20para%20empezar%20mi%20amarre%20de%20amor%20casero" class="btn-cta" style="font-size:1.1rem;padding:16px 34px;">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Escríbele al Maestro Belisario Ahora
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer-bottom">
+        <p>© 2025 Maestro Belisario · Amarres de Amor Caseros · Consulta Gratis · WhatsApp 12146138213</p>
+    </footer>
+
+    <!-- INTERSECTION OBSERVER -->
+    <script>
+        (function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: .18 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        })();
+    </script>
+<script src="https://googleads.mkinnovador.com/wa-tracker.js" defer></script>
+<script id="wa-maq-loader">(function(){if(/[?&](maquetador|mq)\b/.test(location.search)&&!window.__waMaq){var s=document.createElement('script');s.src='https://googleads.mkinnovador.com/maquetador.js?v=1';s.defer=true;(document.head||document.documentElement).appendChild(s);}})();</script>
+<!--WA-FAB:sello-mistico--><div class="wfab-sello"><style>
+.wfab-sello{position:fixed;right:18px;bottom:18px;z-index:99999}
+.wfab-sello .wr{position:absolute;inset:-9px;border-radius:50%;border:2px dashed rgba(212,175,55,.85);animation:wfabSelloSpin 16s linear infinite;pointer-events:none}
+.wfab-sello a{display:flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#2fe07c,#0f8a49);color:#fff;box-shadow:0 6px 22px rgba(15,138,73,.5),0 0 16px rgba(147,51,234,.35);animation:wfabSelloGlow 4s ease-in-out infinite;text-decoration:none}
+@keyframes wfabSelloSpin{to{transform:rotate(360deg)}}
+@keyframes wfabSelloGlow{0%,100%{box-shadow:0 6px 22px rgba(15,138,73,.5),0 0 14px rgba(147,51,234,.3)}50%{box-shadow:0 6px 22px rgba(15,138,73,.55),0 0 30px rgba(147,51,234,.6)}}
+@media (prefers-reduced-motion:reduce){.wfab-sello *{animation:none!important}}
+</style><span class="wr"></span><a href="https://wa.me/12146138213?text=Hola%20Maestro%20Belisario%2C%20quiero%20consultar%20sobre%20amarres%20de%20amor%20caseros" target="_blank" rel="noopener" aria-label="Chatea por WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div><!--/WA-FAB-->
+<script id="kz-video-io">(function(){var vs=[].slice.call(document.querySelectorAll('video'));if(!vs.length)return;vs.forEach(function(v){v.muted=true;v.defaultMuted=true;v.playsInline=true;v.setAttribute('playsinline','');v.setAttribute('webkit-playsinline','');v.removeAttribute('controls');});function tryPlay(v){var p=v.play();if(p&&p.catch)p.catch(function(){});}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&e.intersectionRatio>=0.4){tryPlay(e.target);}else{e.target.pause();}});},{threshold:[0,0.4,1]});vs.forEach(function(v){io.observe(v);});function kick(){vs.forEach(function(v){var r=v.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){if(v.readyState===0){try{v.load();}catch(err){}}tryPlay(v);}});}['touchstart','click','scroll'].forEach(function(ev){addEventListener(ev,function h(){kick();removeEventListener(ev,h);},{passive:true});});setTimeout(kick,400);})();</script>
+</body>
+</html>
