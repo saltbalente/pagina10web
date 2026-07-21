@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buenos Brujos — El Maestro Zacarías te ofrece consulta gratis y pago al ver resultados. Amarres de amor, brujería experta y soluciones espirituales reales. Escríbele ahora.">
+    <title>Buenos Brujos | Maestro Zacarías — Consulta Gratis 24/7</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #000000;
+            --surface: rgba(255, 255, 255, .06);
+            --text: #ffffff;
+            --cta: #25d366;
+            --cta-text: #ffffff;
+            --accent: #ffff00;
+            --radius-sm: 10px;
+            --radius-pill: 50px;
+            --font-heading: 'Cinzel', serif;
+            --font-body: Georgia, 'Times New Roman', serif;
+            --max-width: 420px;
+            --transition: 0.3s ease-out;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            font-size: 17px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            background: rgba(0, 0, 0, .88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            gap: 10px;
+        }
+
+        header .logo-text {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--accent);
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        header .wa-compact {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--cta);
+            color: var(--cta-text);
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: var(--radius-pill);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: .82rem;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+            transition: transform var(--transition), box-shadow var(--transition);
+            flex-shrink: 0;
+        }
+
+        header .wa-compact:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 0 16px rgba(37, 211, 102, .45);
+        }
+        header .wa-compact:active {
+            transform: scale(.96);
+        }
+
+        header .wa-compact svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        main {
+            width: 100%;
+            max-width: var(--max-width);
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        section {
+            padding: 36px 18px;
+            width: 100%;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            min-height: 92svh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 20px 16px 32px;
+        }
+
+        .hero video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, .20) 0%, rgba(0, 0, 0, .72) 78%);
+            z-index: 1;
+        }
+        .hero-overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(37, 211, 102, .08);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, .1);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, .2);
+            padding: 6px 16px;
+            border-radius: var(--radius-pill);
+            font-family: var(--font-heading);
+            font-size: .75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            text-transform: uppercase;
+            animation: fadeUpIn 0.6s ease-out both;
+            animation-delay: 0s;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(2.3rem, 9vw, 3.2rem);
+            line-height: 1.05;
+            color: #ffffff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, .6);
+            letter-spacing: 0.01em;
+            animation: fadeUpIn 0.6s ease-out both;
+            animation-delay: 0.2s;
+            max-width: 360px;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: rgba(255, 255, 255, .85);
+            line-height: 1.45;
+            animation: fadeUpIn 0.6s ease-out both;
+            animation-delay: 0.4s;
+            max-width: 320px;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cta);
+            color: var(--cta-text);
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: var(--radius-pill);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 0.03em;
+            animation: ctaPulse 2.5s ease-in-out infinite, fadeUpIn 0.6s ease-out both;
+            animation-delay: 0s, 0.6s;
+            transition: transform var(--transition), box-shadow var(--transition);
+            box-shadow: 0 0 20px rgba(37, 211, 102, .35);
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 32px rgba(37, 211, 102, .55);
+        }
+        .hero-cta:active {
+            transform: scale(.96);
+        }
+
+        .hero-cta svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .hero-trust {
+            font-family: var(--font-body);
+            font-size: .78rem;
+            color: rgba(255, 255, 255, .65);
+            letter-spacing: 0.02em;
+            animation: fadeUpIn 0.6s ease-out both;
+            animation-delay: 0.8s;
+        }
+
+        .hero-scroll-arrow {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounceArrow 2s ease-in-out infinite;
+            opacity: .7;
+        }
+        .hero-scroll-arrow svg {
+            width: 28px;
+            height: 28px;
+            stroke: #ffffff;
+        }
+
+        @keyframes fadeUpIn {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes ctaPulse {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.04);
+            }
+        }
+        @keyframes bounceArrow {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(10px);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-cta {
+                animation: none;
+            }
+            .hero-scroll-arrow {
+                animation: none;
+                opacity: .4;
+            }
+            .hero-badge,
+            .hero h1,
+            .hero-subtitle,
+            .hero-cta,
+            .hero-trust {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* ── Secciones generales ── */
+        .section-title {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.45rem;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 18px;
+            letter-spacing: 0.03em;
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            font-size: .95rem;
+            color: rgba(255, 255, 255, .8);
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: var(--radius-sm);
+            padding: 20px 18px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .card img {
+            width: 100%;
+            max-width: 260px;
+            height: auto;
+            aspect-ratio: 5/6;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            display: block;
+            margin: 0 auto 14px;
+            max-height: 45vh;
+        }
+
+        .card p {
+            font-family: var(--font-body);
+            font-size: .92rem;
+            color: rgba(255, 255, 255, .85);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .wa-btn-inline {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: var(--cta);
+            color: var(--cta-text);
+            text-decoration: none;
+            padding: 11px 22px;
+            border-radius: var(--radius-pill);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: .9rem;
+            letter-spacing: 0.03em;
+            transition: transform var(--transition), box-shadow var(--transition);
+            margin-top: 8px;
+            align-self: center;
+        }
+        .wa-btn-inline:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 18px rgba(37, 211, 102, .4);
+        }
+        .wa-btn-inline:active {
+            transform: scale(.96);
+        }
+        .wa-btn-inline svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .center-flex {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        /* ── Video vertical ── */
+        .video-vertical-wrap {
+            max-width: 340px;
+            margin: 0 auto 18px;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            aspect-ratio: 9/16;
+            background: #0a0a0a;
+            border: 1px solid rgba(255, 255, 255, .1);
+        }
+        .video-vertical-wrap video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ── Testimonios ── */
+        .testimonial {
+            background: var(--surface);
+            border-radius: var(--radius-sm);
+            padding: 18px 16px;
+            margin-bottom: 14px;
+            border-left: 3px solid var(--accent);
+            position: relative;
+        }
+        .testimonial .quote {
+            font-family: var(--font-body);
+            font-size: .9rem;
+            color: rgba(255, 255, 255, .9);
+            line-height: 1.55;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .testimonial .author {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: .78rem;
+            color: var(--accent);
+            letter-spacing: 0.03em;
+        }
+        .testimonial .location {
+            font-size: .7rem;
+            color: rgba(255, 255, 255, .5);
+        }
+        .testimonial img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            float: right;
+            margin-left: 10px;
+            margin-bottom: 4px;
+            border: 2px solid rgba(255, 255, 255, .2);
+        }
+
+        /* ── FAQ ── */
+        details.faq-item {
+            background: var(--surface);
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+            border: 1px solid rgba(255, 255, 255, .06);
+            overflow: hidden;
+            transition: background var(--transition);
+        }
+        details.faq-item[open] {
+            background: rgba(255, 255, 255, .09);
+        }
+        details.faq-item summary {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: .9rem;
+            padding: 14px 16px;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            color: var(--text);
+            letter-spacing: 0.02em;
+            user-select: none;
+        }
+        details.faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        details.faq-item summary::after {
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-right: 2px solid var(--accent);
+            border-bottom: 2px solid var(--accent);
+            transform: rotate(45deg);
+            transition: transform 0.25s ease;
+            flex-shrink: 0;
+            margin-left: auto;
+        }
+        details.faq-item[open] summary::after {
+            transform: rotate(-135deg);
+        }
+        details.faq-item .faq-answer {
+            padding: 0 16px 14px;
+            font-family: var(--font-body);
+            font-size: .85rem;
+            color: rgba(255, 255, 255, .8);
+            line-height: 1.55;
+        }
+
+        /* ── Footer ── */
+        footer {
+            width: 100%;
+            max-width: var(--max-width);
+            text-align: center;
+            padding: 20px 16px 30px;
+            font-size: .7rem;
+            color: rgba(255, 255, 255, .35);
+            letter-spacing: 0.03em;
+            font-family: var(--font-heading);
+        }
+
+        /* ── Reveal ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-stagger>*:nth-child(1) {
+            transition-delay: 0s;
+        }
+        .reveal-stagger>*:nth-child(2) {
+            transition-delay: 0.05s;
+        }
+        .reveal-stagger>*:nth-child(3) {
+            transition-delay: 0.1s;
+        }
+        .reveal-stagger>*:nth-child(4) {
+            transition-delay: 0.15s;
+        }
+        .reveal-stagger>*:nth-child(5) {
+            transition-delay: 0.2s;
+        }
+        .reveal-stagger>*:nth-child(6) {
+            transition-delay: 0.25s;
+        }
+
+        @media (min-width: 768px) {
+            main {
+                max-width: 600px;
+            }
+            section {
+                padding: 44px 24px;
+            }
+            .hero h1 {
+                font-size: clamp(2.6rem, 6vw, 3.6rem);
+                max-width: 500px;
+            }
+            .hero-subtitle {
+                max-width: 420px;
+                font-size: 1.1rem;
+            }
+            .card img {
+                max-width: 300px;
+            }
+            .video-vertical-wrap {
+                max-width: 360px;
+            }
+            .testimonial {
+                padding: 20px 18px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            .reveal-stagger>* {
+                transition-delay: 0s;
+            }
+        }
+    </style>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N88RGDQH');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16586320392"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16586320392');</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%236d28d9'/><text x='32' y='44' font-size='34' text-anchor='middle'>🔮</text></svg>">
+</head>
+<body>
+<script id="wa-slider-guard">(function(){if(window.__waSliderGuard)return;window.__waSliderGuard=1;var o=Element.prototype.scrollIntoView;Element.prototype.scrollIntoView=function(){var c=this.parentElement;while(c&&c!==document.body&&!(c.scrollWidth>c.clientWidth+8))c=c.parentElement;if(c&&c!==document.body){var cr=c.getBoundingClientRect(),er=this.getBoundingClientRect();c.scrollTo({left:c.scrollLeft+(er.left-cr.left)-(cr.width-er.width)/2,behavior:'smooth'});return}return o.apply(this,arguments)};})();</script>
+<script id="wa-touch-guard">(function(){if(window.__waTouchGuard)return;window.__waTouchGuard=1;var o=EventTarget.prototype.addEventListener;EventTarget.prototype.addEventListener=function(t,f,x){if(t==='touchmove'||t==='touchstart'){var p=(typeof x==='object'&&x)?x:{capture:x===true};if(p.passive!==true)x={capture:!!p.capture,once:!!p.once,passive:true};}return o.call(this,t,f,x);};addEventListener('DOMContentLoaded',function(){try{var els=document.body.querySelectorAll('*');for(var i=0;i<els.length;i++){var c=getComputedStyle(els[i]).touchAction;if(c==='none'||c==='pan-x'){els[i].style.touchAction='pan-x pan-y pinch-zoom';}}}catch(e){}});})();</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N88RGDQH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header>
+        <span class="logo-text">Maestro Zacarías</span>
+        <a href="https://wa.me/14133912149?text=Hola%20Maestro%20Zacar%C3%ADas%2C%20quisiera%20una%20consulta%20gratis%20sobre%20buenos%20brujos" class="wa-compact" aria-label="Chatear con el Maestro Zacarías en WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.99c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp
+        </a>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <video autoplay muted loop playsinline preload="metadata" poster="https://storage.googleapis.com/brujeriaweb/cover.webp">
+                <source src="https://storage.googleapis.com/brujeriaweb/video-testimonio.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">✦ Maestro disponible ahora</span>
+                <h1>Buenos Brujos — El Maestro Zacarías te Espera</h1>
+                <p class="hero-subtitle">Ella llegó un martes, con la voz quebrada y el alma hecha pedazos. Había buscado buenos brujos por meses, pero solo encontró charlatanes. Hasta que alguien le habló de Zacarías. Hoy su historia es otra. La tuya también puede cambiar.</p>
+                <a href="https://wa.me/14133912149?text=Hola%20Maestro%20Zacar%C3%ADas%2C%20necesito%20ayuda%20urgente%20con%20un%20trabajo%20espiritual" class="hero-cta">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.99c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413z"/></svg>
+                    Escríbele al Maestro Zacarías
+                </a>
+                <span class="hero-trust">⭐ 4.9 · +5.000 consultas · Respuesta inmediata</span>
+            </div>
+            <div class="hero-scroll-arrow" aria-hidden="true">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            </div>
+        </section>
+
+        <!-- SOBRE EL MAESTRO -->
+        <section id="sobre-maestro" class="reveal">
+            <h2 class="section-title">El Maestro Zacarías</h2>
+            <div class="card">
+                
+                <p>El Maestro Zacarías no nació siendo brujo. Fue llamado. Desde los siete años, en las montañas de su tierra, aprendió de los mayores el lenguaje de las velas, el susurro de las hierbas y la fuerza de los rituales que doblegan lo imposible. Más de 35 años después, sus manos han tejido más historias de amor recuperado que ningún otro.</p>
+                <p>Hoy, desde su altar, recibe a quienes ya lo intentaron todo. No promete milagros — los construye. Cada caso es un nuevo capítulo donde la fe y el arte se unen para devolverte lo que te pertenece. Si buscas buenos brujos de verdad, aquí has llegado.</p>
+                <div class="center-flex">
+                    <a href="https://wa.me/14133912149?text=Maestro%20Zacar%C3%ADas%2C%20quiero%20contarle%20mi%20caso%20para%20una%20consulta%20gratis" class="wa-btn-inline">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.99c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413z"/></svg>
+                        Consulta Gratis
+                    </a>
+                </div>
+            </div>
+            <!-- Video del maestro -->
+            <div class="video-vertical-wrap">
+                <video autoplay muted loop playsinline preload="metadata" poster="https://storage.googleapis.com/brujeriaweb/cover.webp">
+                    <source src="https://storage.googleapis.com/brujeriaweb/videogif22.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- CONSULTA GRATIS -->
+        <section id="consulta-gratis" class="reveal">
+            <h2 class="section-title">Consulta Gratis con Buenos Brujos</h2>
+            <p class="section-subtitle">Tu primera consulta no te costará nada. El Maestro Zacarías te escuchará, leerá tu caso y te dirá con honestidad si puede ayudarte. Sin compromisos, sin letras pequeñas. Solo la verdad de un buen brujo que sabe que la confianza se gana antes que el dinero.</p>
+            <div class="card">
+                
+                <p>Conmigo harás tus deseos realidad a través de los poderosos amarres para atraerlo o atraerla, sin importar en dónde esté, sin daño alguno. Solución a toda clase de problemas: amor, suerte, dinero, salud, maleficios, enfermedades postizas, retiramos amantes, malas energías, posesiones, espíritus, salvamentos, hacemos protecciones, contras y sanciones espirituales.</p>
+                <div class="center-flex">
+                    <a href="https://wa.me/14133912149?text=Hola%20Maestro%20Zacar%C3%ADas%2C%20%C2%BFpuedo%20hacer%20una%20consulta%20gratis%3F" class="wa-btn-inline">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.99c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413z"/></svg>
+                        Consulte Gratis por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <!-- Imagen del banco para buenos brujos -->
+            <div class="card">
+                <img src="https://buenos-brujos.videntes.org/optimizado/ag-200183868644/banco-altar-esoterico-con-devoto.webp"
+                width="800" height="960" alt="Altar esotérico con devoto - Buenos Brujos" loading="lazy" decoding="async" style="aspect-ratio:5/6;object-fit:cover;border-radius:10px;max-height:45vh;">
+                <p>Soy especialista en el uso de velas y hierbas mágicas para potenciar mis hechizos y conjuros, y también me especializo en la realización de rituales y ceremonias para atraer el amor, la pasión y la felicidad. ¿Está buscando una solución para fortalecer su relación amorosa o encontrar a su alma gemela? ¿Ha intentado todo sin resultados satisfactorios? Si cree en la magia y en su poder para solucionar problemas, ha llegado al lugar correcto.</p>
+                <div class="center-flex">
+                    <a href="https://wa.me/14133912149?text=Maestro%20Zacar%C3%ADas%2C%20quiero%20saber%20m%C3%A1s%20sobre%20sus%20trabajos%20espirituales" class="wa-btn-inline">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.99c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413z"/></svg>
+                        Chatear con el Maestro
+                    </a>
+                </div>
+            </div>
+            <!-- Video de ritual -->
+            <div class="video-vertical-wrap">
+                <video autoplay muted loop playsinline preload="metadata">
+                    <source src="https://amarres-de-amor-gratis.brujero.org/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- PAGA AL VER RESULTADOS -->
+        <section id="paga-resultados" class="reveal">
+            <h2 class="section-title">Paga al Ver Resultados</h2>
+            <p class="section-subtitle">Esta es la garantía que solo los buenos brujos se atreven a ofrecer: tú no pagas hasta que veas resultados. El Maestro trabaja primero, y cuando el cambio se manifieste en tu vida, entonces cumples. Así de simple, así de justo.</p>
+            <div class="card">
+                
+                <p>Como medida de garantía, el Maestro Zacarías solo cobra cuando usted vea resultados en su trabajo. Atraigo y regreso al ser querido en 72 horas sin importar la edad, sexo, tiempo, ni distancia. Cruzándolo mente, cuerpo y espíritu, dominando pensamiento y sentimiento hasta doblegarlo y quitarle infidelidad, indiferencia, rebeldía, orgullo y retiro rival. ¡OJO, DONDE OTROS HAN FRACASADO! ¡¡YO TRIUNFO!!</p>
+                <div class="center-flex">
+                    <a href="https://wa.me/14133912149?text=Maestro%20Zacar%C3%ADas%2C%20me%20interesa%20su%20garant%C3%ADa%20de%20pago%20al%20ver%20resultados" class="wa-btn-inline">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.99c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413z"/></svg>
+                        Escríbele al Maestro Zacarías
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                
+                <p>Soy un brujo altamente experimentado y con una gran reputación en el mundo de la brujería. Me he dedicado a estudiar y practicar la brujería durante más de 35 años, y he ayudado a cientos de personas a conseguir lo que desean en el ámbito amoroso, personal y profesional. Yo trabajo y después usted paga.</p>
+                <div class="center-flex">
+                    <a href="https://wa.me/14133912149?text=Maestro%20Zacar%C3%ADas%2C%20%E2%80%94%20consulta%20gratis%20y%20pago%20al%20ver%20resultados" class="wa-btn-inline">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.99c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413z"/></svg>
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section id="testimonios" class="reveal">
+            <h2 class="section-title">Historias Reales de Quienes Ya Confiaron</h2>
+            <p class="section-subtitle">Buenos brujos dejan huella. Estas son algunas personas que hoy viven la historia que soñaron, gracias al Maestro Zacarías.</p>
+            <div class="reveal-stagger">
+                <div class="testimonial">
+                    
+                    <p class="quote">"La verdad yo no creía en estas cosas. Había gastado cientos de dólares con supuestos brujos que solo me dejaron esperando. Un amigo me habló de Zacarías y decidí intentarlo una última vez. A la semana, mi esposo volvió a casa. No sé cómo lo hizo, pero lo hizo."</p>
+                    <span class="author">Lucía Márquez</span><br>
+                    <span class="location">Phoenix, AZ · 12 de Marzo de 2023</span>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"Llevaba tres años solo, con una tristeza que no se me quitaba con nada. Fui a terapia, tomé medicamentos, nada funcionaba. El Maestro Zacarías me recibió sin cita, me escuchó casi una hora y a los pocos días empecé a notar un cambio dentro de mí. Luego llegó ella. Hoy estamos juntos."</p>
+                    <span class="author">Ramón Delgado</span><br>
+                    <span class="location">Charlotte, NC · 8 de Julio de 2024</span>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"Se lo juro que no soy de escribir reseñas, pero este hombre merece que el mundo lo conozca. Mi hija andaba con malas compañías, rebelde, perdida. El Maestro le hizo un trabajo de endulzamiento y protección. En menos de un mes, mi niña volvió a ser la de antes. Gracias, Maestro."</p>
+                    <span class="author">Yolanda R.</span><br>
+                    <span class="location">Newark, NJ · 19 de Octubre de 2023</span>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"Buenos brujos hay pocos, y yo ya había perdido la fe. El Maestro Zacarías me demostró que sí existen. Hice un amarre con él y en 5 días recibí la llamada que tanto esperaba. Efectivo, directo y sin rodeos."</p>
+                    <span class="author">Tomás Herrera</span><br>
+                    <span class="location">Fresno, CA · 1 de Febrero de 2024</span>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"Consulté por un problema de dinero y mala racha que no se iba. El Maestro me hizo una limpia y un ritual de abundancia. A las dos semanas me llamaron de un trabajo que ni había solicitado. ¡Increíble pero cierto! Lo recomiendo con los ojos cerrados."</p>
+                    <span class="author">Elena Vargas</span><br>
+                    <span class="location">Orlando, FL · 25 de Mayo de 2024</span>
+                </div>
+            </div>
+            <div class="center-flex" style="margin-top:16px;">
+                <a href="https://wa.me/14133912149?text=Maestro%20Zacar%C3%ADas%2C%20quiero%20ser%20otra%20historia%20de%20%C3%A9xito%20como%20las%20que%20le%C3%AD" class="wa-btn-inline">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.99c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413z"/></svg>
+                    Tu historia también puede cambiar
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="reveal">
+            <h2 class="section-title">Preguntas Frecuentes sobre Buenos Brujos</h2>
+            <details class="faq-item">
+                <summary>¿Cómo sé si un brujo es bueno y no un charlatán?</summary>
+                <div class="faq-answer">Un buen brujo no cobra por adelantado, te escucha sin prisas, y te dice con honestidad si tu caso tiene solución. El Maestro Zacarías ofrece consulta gratis y solo cobra cuando tú ves resultados. Esa es la señal que distingue a los buenos brujos de los charlatanes.</div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Qué tipo de trabajos realizan los buenos brujos?</summary>
+                <div class="faq-answer">Los buenos brujos como el Maestro Zacarías manejan amarres de amor, endulzamientos, limpias espirituales, retiro de malas energías, protecciones, rituales de abundancia y sanación. Cada trabajo se diseña a la medida de tu caso, sin fórmulas genéricas.</div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Los buenos brujos ofrecen consulta gratis?</summary>
+                <div class="faq-answer">Sí. El Maestro Zacarías te ofrece una primera consulta sin costo. Durante esa conversación, leerá tu situación y te explicará qué puede hacer por ti. No hay compromiso ni letra pequeña: solo la verdad de alguien que confía en su arte.</div>
+            </details>
+            <details class="faq-item">
+                <summary>¿En cuánto tiempo se ven resultados con un buen brujo?</summary>
+                <div class="faq-answer">Cada caso es único, pero muchos clientes reportan cambios notables en los primeros 5 a 7 días. El Maestro Zacarías trabaja con precisión para que el ser querido regrese en 72 horas, aunque factores externos pueden influir. Lo importante es que no pagas hasta que veas el resultado.</div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Cómo funciona una consulta con un buen brujo?</summary>
+                <div class="faq-answer">Le escribes al Maestro Zacarías por WhatsApp. Él te escucha, analiza tu caso, y te dice con franqueza si puede ayudarte. Si decides seguir adelante, él comienza el trabajo y tú solo pagas cuando el resultado se manifieste. Así de simple y transparente.</div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Qué diferencia a un buen brujo de uno falso?</summary>
+                <div class="faq-answer">Un buen brujo tiene trayectoria comprobable, no pide dinero por adelantado, te muestra evidencia de su trabajo, y sus clientes lo recomiendan. El Maestro Zacarías lleva más de 35 años de práctica, con cientos de testimonios reales y una garantía que ningún charlatán se atrevería a ofrecer.</div>
+            </details>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section id="cta-final" class="reveal" style="text-align:center;">
+            <h2 class="section-title">Tu Historia También Puede Cambiar</h2>
+            <p class="section-subtitle">No dejes pasar otro día con la misma incertidumbre. El Maestro Zacarías está disponible ahora para escucharte. Buenos brujos no se encuentran en cualquier esquina — tú ya llegaste hasta aquí. Da el último paso.</p>
+            <a href="https://wa.me/14133912149?text=Maestro%20Zacar%C3%ADas%2C%20estoy%20listo%20para%20cambiar%20mi%20historia.%20%C2%BFMe%20ayuda%3F" class="hero-cta" style="display:inline-flex;margin:0 auto;">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.99c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413z"/></svg>
+                Escríbele al Maestro Zacarías Ahora
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Maestro Zacarías · Buenos Brujos · Consulta Gratis 24/7 · Paga al Ver Resultados</p>
+        <p style="margin-top:4px;">Estados Unidos · Atención en Español · WhatsApp: 14133912149</p>
+    </footer>
+
+    <script>
+        (function() {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+            reveals.forEach(el => observer.observe(el));
+        })();
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "¿Cómo sé si un brujo es bueno y no un charlatán?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Un buen brujo no cobra por adelantado, te escucha sin prisas, y te dice con honestidad si tu caso tiene solución. El Maestro Zacarías ofrece consulta gratis y solo cobra cuando tú ves resultados. Esa es la señal que distingue a los buenos brujos de los charlatanes."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿Qué tipo de trabajos realizan los buenos brujos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Los buenos brujos como el Maestro Zacarías manejan amarres de amor, endulzamientos, limpias espirituales, retiro de malas energías, protecciones, rituales de abundancia y sanación. Cada trabajo se diseña a la medida de tu caso, sin fórmulas genéricas."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿Los buenos brujos ofrecen consulta gratis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. El Maestro Zacarías te ofrece una primera consulta sin costo. Durante esa conversación, leerá tu situación y te explicará qué puede hacer por ti. No hay compromiso ni letra pequeña: solo la verdad de alguien que confía en su arte."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿En cuánto tiempo se ven resultados con un buen brujo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cada caso es único, pero muchos clientes reportan cambios notables en los primeros 5 a 7 días. El Maestro Zacarías trabaja con precisión para que el ser querido regrese en 72 horas, aunque factores externos pueden influir. Lo importante es que no pagas hasta que veas el resultado."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿Cómo funciona una consulta con un buen brujo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Le escribes al Maestro Zacarías por WhatsApp. Él te escucha, analiza tu caso, y te dice con franqueza si puede ayudarte. Si decides seguir adelante, él comienza el trabajo y tú solo pagas cuando el resultado se manifieste. Así de simple y transparente."
+                }
+            }, {
+                "@type": "Question",
+                "name": "¿Qué diferencia a un buen brujo de uno falso?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Un buen brujo tiene trayectoria comprobable, no pide dinero por adelantado, te muestra evidencia de su trabajo, y sus clientes lo recomiendan. El Maestro Zacarías lleva más de 35 años de práctica, con cientos de testimonios reales y una garantía que ningún charlatán se atrevería a ofrecer."
+                }
+            }]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Buenos Brujos - Maestro Zacarías",
+            "description": "Consulta gratis con el Maestro Zacarías, buenos brujos especializados en amarres de amor, brujería experta, limpias y soluciones espirituales. Paga al ver resultados.",
+            "provider": {
+                "@type": "Person",
+                "name": "Maestro Zacarías",
+                "jobTitle": "Brujo Experto en Amarres y Brujería",
+                "description": "Más de 35 años de experiencia en brujería, amarres de amor y soluciones espirituales."
+            },
+            "areaServed": {
+                "@type": "Country",
+                "name": "Estados Unidos"
+            },
+            "availableLanguage": "es",
+            "termsOfService": "https://buenos-brujos.videntes.org/",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-413-391-2149",
+                "contactType": "customer service",
+                "availableLanguage": "Spanish"
+            }
+        }
+    </script>
+<script src="https://googleads.mkinnovador.com/wa-tracker.js" defer></script>
+<script id="wa-maq-loader">(function(){if(/[?&](maquetador|mq)\b/.test(location.search)&&!window.__waMaq){var s=document.createElement('script');s.src='https://googleads.mkinnovador.com/maquetador.js?v=1';s.defer=true;(document.head||document.documentElement).appendChild(s);}})();</script>
+<!--WA-FAB:amuleto-esmeralda--><div class="wfab-amul"><style>
+.wfab-amul{position:fixed;right:18px;bottom:18px;z-index:99999}
+.wfab-amul a{display:flex;align-items:center;justify-content:center;width:62px;height:62px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);background:linear-gradient(160deg,#34d399,#065f46);color:#fff;text-decoration:none;animation:wfabAmulBreath 4.5s ease-in-out infinite}
+.wfab-amul::before{content:'';position:absolute;inset:-10px;border-radius:50%;background:radial-gradient(circle,rgba(52,211,153,.4),transparent 70%);animation:wfabAmulBreath 4.5s ease-in-out infinite;pointer-events:none}
+@keyframes wfabAmulBreath{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@media (prefers-reduced-motion:reduce){.wfab-amul a,.wfab-amul::before{animation:none!important}}
+</style><a href="https://wa.me/14133912149?text=Hola%20Maestro%20Zacar%C3%ADas%2C%20quisiera%20una%20consulta%20gratis%20sobre%20buenos%20brujos" target="_blank" rel="noopener" aria-label="Chatea por WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div><!--/WA-FAB-->
+<script id="kz-video-io">(function(){var vs=[].slice.call(document.querySelectorAll('video'));if(!vs.length)return;vs.forEach(function(v){v.muted=true;v.defaultMuted=true;v.playsInline=true;v.setAttribute('playsinline','');v.setAttribute('webkit-playsinline','');v.removeAttribute('controls');});function tryPlay(v){var p=v.play();if(p&&p.catch)p.catch(function(){});}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&e.intersectionRatio>=0.4){tryPlay(e.target);}else{e.target.pause();}});},{threshold:[0,0.4,1]});vs.forEach(function(v){io.observe(v);});function kick(){vs.forEach(function(v){var r=v.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){if(v.readyState===0){try{v.load();}catch(err){}}tryPlay(v);}});}['touchstart','click','scroll'].forEach(function(ev){addEventListener(ev,function h(){kick();removeEventListener(ev,h);},{passive:true});});setTimeout(kick,400);})();</script>
+</body>
+</html>
