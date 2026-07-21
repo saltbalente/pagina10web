@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expertos en Amarres de Amor | Maestro Teodoro | Consulta Gratis</title>
+    <meta name="description" content="Especialistas en amarres de amor profesionales. El Maestro Teodoro te guía con sabiduría ancestral para restaurar tu relación. Consulta gratis.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #111111;
+            --card-bg: #2a373d; /* Ligeramente oscurecido de #455a64 para mejor contraste con el oro */
+            --text-main: #ffffff;
+            --text-muted: #b0bec5;
+            --primary: #8b6914;
+            --primary-hover: #a67c18;
+            --accent: #000000;
+            --radius: 4px;
+            --font-main: 'Cinzel', serif;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); text-align: center; }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); text-align: center; }
+        h3 { font-size: 1.25rem; color: var(--text-main); }
+        p { margin-bottom: 1rem; font-size: 1.05rem; }
+
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(139, 105, 20, 0.3);
+            padding: 0.75rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: var(--text-main);
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(139, 105, 20, 0.2);
+            text-align: center;
+        }
+
+        .btn:hover, .btn:active {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(139, 105, 20, 0.4);
+        }
+
+        .btn-small {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        .btn-pulse {
+            animation: pulse 2.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(139, 105, 20, 0.4); }
+            70% { transform: scale(1.04); box-shadow: 0 0 0 15px rgba(139, 105, 20, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(139, 105, 20, 0); }
+        }
+
+        /* Hero */
+        .hero {
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1a1a 0%, var(--bg-color) 100%);
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: var(--text-muted);
+            font-size: 1.15rem;
+        }
+
+        /* Media Elements */
+        .video-wrapper {
+            max-width: 380px;
+            margin: 2rem auto;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(139, 105, 20, 0.2);
+        }
+
+        video {
+            width: 100%;
+            aspect-ratio: 9/16;
+            object-fit: cover;
+            display: block;
+        }
+
+        .img-wrapper {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 1.5rem;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 5/6;
+            object-fit: cover;
+            max-height: 45vh;
+            display: block;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .about-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        }
+
+        .testimonial-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border-left: 3px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #e0e0e0;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .service-card:hover {
+            border-color: rgba(139, 105, 20, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background-color: var(--card-bg);
+            margin-bottom: 1rem;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        summary {
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary);
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+        
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary::after { transform: rotate(45deg); }
+
+        .faq-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-muted);
+        }
+
+        /* Utilities & Animations */
+        .text-center { text-align: center; }
+        .mt-4 { margin-top: 2rem; }
+        .mb-2 { margin-bottom: 1rem; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .reveal { opacity: 1; transform: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "Maestro Teodoro - Amarres de Amor",
+          "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirkkFy4rlHGXIeLoUczdiFC7IjeXH4kEY_mBmac_bQvmZfCqDYLXSGYiUJ4r1L14fJjpWxu3RWmbfzzHF1By3f4VU4JHiIKw1SasCRJTCZ0xKlePaRPgPqCsigpnbEgwFOK3dX5mRM6A1c/s1600/NAZARIO.jpg",
+          "telephone": "+14133912149",
+          "priceRange": "$$",
+          "description": "Especialista en amarres de amor y consultas espirituales. Recupera la armonía en tu relación con la guía del Maestro Teodoro."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué es exactamente un amarre de amor?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Es un trabajo espiritual profundo diseñado para sanar energías discordantes, restaurar vínculos rotos y fomentar la reconciliación desde el amor genuino y la comprensión mutua."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuánto tiempo tarda en hacer efecto un amarre?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cada proceso es único. Depende de la energía de ambas personas y la complejidad de la situación. La fe, la paciencia y seguir las indicaciones son fundamentales para ver la luz."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿La consulta inicial para amarres de amor tiene costo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, la primera evaluación para escuchar tu caso, entender tu dolor y determinar si un amarre de amor es el camino adecuado es completamente gratuita y sin compromiso."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Es seguro realizar estos trabajos espirituales?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. Mi labor se basa en el respeto a las energías y el bienestar emocional. Buscamos la armonía y sanar heridas, acompañándote en el proceso sin forzar situaciones desde la oscuridad."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Mi pareja se enterará del trabajo espiritual?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Todo proceso se realiza bajo el más estricto secreto profesional. Tu privacidad está protegida en todo momento; la otra persona solo sentirá un cambio positivo en sus sentimientos."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N88RGDQH');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16586320392"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-16586320392');</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%236d28d9'/><text x='32' y='44' font-size='34' text-anchor='middle'>🔮</text></svg>">
+</head>
+<body>
+<script id="wa-slider-guard">(function(){if(window.__waSliderGuard)return;window.__waSliderGuard=1;var o=Element.prototype.scrollIntoView;Element.prototype.scrollIntoView=function(){var c=this.parentElement;while(c&&c!==document.body&&!(c.scrollWidth>c.clientWidth+8))c=c.parentElement;if(c&&c!==document.body){var cr=c.getBoundingClientRect(),er=this.getBoundingClientRect();c.scrollTo({left:c.scrollLeft+(er.left-cr.left)-(cr.width-er.width)/2,behavior:'smooth'});return}return o.apply(this,arguments)};})();</script>
+<script id="wa-touch-guard">(function(){if(window.__waTouchGuard)return;window.__waTouchGuard=1;var o=EventTarget.prototype.addEventListener;EventTarget.prototype.addEventListener=function(t,f,x){if(t==='touchmove'||t==='touchstart'){var p=(typeof x==='object'&&x)?x:{capture:x===true};if(p.passive!==true)x={capture:!!p.capture,once:!!p.once,passive:true};}return o.call(this,t,f,x);};addEventListener('DOMContentLoaded',function(){try{var els=document.body.querySelectorAll('*');for(var i=0;i<els.length;i++){var c=getComputedStyle(els[i]).touchAction;if(c==='none'||c==='pan-x'){els[i].style.touchAction='pan-x pan-y pinch-zoom';}}}catch(e){}});})();</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N88RGDQH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">Maestro Teodoro</a>
+            <a href="https://wa.me/14133912149?text=Hola%20Maestro%20Teodoro,%20deseo%20una%20consulta%20gratis%20sobre%20amarres%20de%20amor." class="btn btn-small">Consulta Gratis</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Sección: Consultas Gratis (Hero) -->
+        <section class="hero">
+            <div class="container reveal">
+                <h1>Amarres de Amor Profesional</h1>
+                <p>Si sientes que la distancia crece y el dolor no cesa, hay un camino para restaurar el vínculo. Lo que sientes es real, y tiene salida. Atención inmediata y confidencial para recuperar tu paz.</p>
+                <a href="https://wa.me/14133912149?text=Hola%20Maestro%20Teodoro,%20necesito%20ayuda%20urgente%20con%20un%20amarre%20de%20amor." class="btn btn-pulse">Solicitar Ayuda Ahora</a>
+            </div>
+        </section>
+
+        <!-- 2. Sección: Maestro experto -->
+        <section id="maestro">
+            <div class="container reveal">
+                <div class="about-grid">
+                    <div>
+                        <h2>Maestro Experto Teodoro</h2>
+                        <p>Con la pasión por las hierbas ancestrales y una profunda vocación de servicio, he llegado a convertirme en un guía espiritual reconocido. Comprendo el vacío que deja el distanciamiento de un ser amado.</p>
+                        <p>Si estás atravesando por un mal momento en tu relación y la confusión te abruma, no estás solo. Debemos analizar tu situación con calma. Los <strong>amarres de amor</strong> que realizo requieren una consulta previa gratuita para determinar el origen del problema y tener la certeza de que obraremos por el buen desarrollo de tu felicidad.</p>
+                        <div class="mt-4 text-center">
+                            <a href="https://wa.me/14133912149?text=Maestro%20Teodoro,%20quiero%20que%20analice%20mi%20caso%20de%20pareja." class="btn">Escríbele al Maestro Teodoro</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img-wrapper">
+                            
+                        </div>
+                        <div class="video-wrapper">
+                            <video autoplay muted loop playsinline preload="metadata" poster="https://raw.githubusercontent.com/saltbalente/cssismael/main/brujo-magia-negra-blanca4.jpeg">
+                                <source src="https://raw.githubusercontent.com/saltbalente/cssismael/main/video1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 & 4. Sección: Testimonios -->
+        <section id="testimonios" style="background-color: #0a0a0a;">
+            <div class="container reveal">
+                <h2>Testimonios de WhatsApp</h2>
+                <p class="text-center mb-2" style="max-width: 700px; margin: 0 auto 2rem; color: var(--text-muted);">En ocasiones el proceso requiere paciencia, pero al final la energía encuentra su cauce. Deseo conocer tu caso, seguro que juntos hallaremos la solución para que seas feliz con quien deseas estar.</p>
+                
+                <div class="video-wrapper">
+                    <video autoplay muted loop playsinline preload="metadata" poster="https://raw.githubusercontent.com/saltbalente/cssismael/main/magia-blanca22.jpg">
+                        <source src="https://raw.githubusercontent.com/saltbalente/cssismael/main/video3.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <h3 class="text-center mt-4" style="color: var(--primary); font-size: 1.8rem;">Algunos testimonios</h3>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"La verdad yo no creía mucho en esto, pero el dolor de la separación me hizo buscar ayuda. El Maestro Teodoro me escuchó sin juzgar en ningún momento. Hicimos un amarre de amor y a la semana empezamos a hablar de nuevo con mi esposo. Siento mucha paz interior."</p>
+                        <p class="testimonial-author">Javier M. — Houston, TX</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Estábamos al borde del divorcio por malentendidos constantes y frialdad. Con la guía del maestro, logramos alejar esas malas energías que nos separaban poco a poco. Hoy nuestra relación tiene una luz diferente, más comprensiva."</p>
+                        <p class="testimonial-author">Elena Ramírez — Phoenix, AZ</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Se lo juro que pensé que lo había perdido para siempre tras su partida. Me sentía desesperada y sola. El trabajo del maestro fue un proceso de fe y constancia, pero valió la pena cada día. Él volvió a buscarme reconociendo sus errores."</p>
+                        <p class="testimonial-author">Carmen V. — Charlotte, NC</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"En medio de tanta confusión y noches sin dormir, encontré al Maestro Teodoro. Su amarre de amor profesional me dio la claridad que necesitaba para no rendirme. En pocos días vi un cambio radical en la actitud y el cariño de mi pareja."</p>
+                        <p class="testimonial-author">Roberto — Newark, NJ</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Llevábamos meses separados y yo había intentado de todo sin éxito. La honestidad del maestro desde el primer día me dio la confianza para avanzar. El proceso tomó su tiempo natural, pero hoy estamos reconstruyendo nuestro hogar con amor real."</p>
+                        <p class="testimonial-author">Silvia G. — Orlando, FL</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5 al 11. Servicios -->
+        <section id="servicios">
+            <div class="container reveal">
+                <h2 class="mb-2">Guía Espiritual para tu Relación</h2>
+                <p class="text-center mb-2" style="max-width: 700px; margin: 0 auto 3rem; color: var(--text-muted);">Es indispensable la fe, la paciencia y dejar que todo se ponga a nuestro favor. Conoce los caminos que podemos recorrer para sanar tu corazón.</p>
+                
+                <div class="services-grid">
+                    
+                    <!-- 5. Limpias -->
+                    <div class="service-card reveal">
+                        <h3>🌿 Limpias Espirituales 🌿</h3>
+                        <p>Rituales ancestrales para liberar las cargas y bloqueos energéticos que afectan tu aura y entorpecen tu vida amorosa. Recupera la armonía interior y abre los caminos que hoy sientes cerrados por la negatividad.</p>
+                        <a href="https://wa.me/14133912149?text=Deseo%20información%20sobre%20limpias%20espirituales." class="btn btn-small mt-4" style="margin-top: auto;">Consultar</a>
+                    </div>
+
+                    <!-- 6. Consulta -->
+                    <div class="service-card reveal">
+                        <h3>🔮 Consulta Espiritual 🔮</h3>
+                        <div class="video-wrapper" style="max-width: 200px; margin: 1rem auto;">
+                            <video autoplay muted loop playsinline preload="metadata">
+                                <source src="https://curanderosgratis.brujero.org/assets/gemini-hierbas-vertical.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <p>Análisis profundo y sereno de tu situación actual. A través de mi videncia, descubriremos las verdaderas intenciones, los obstáculos ocultos y el destino de tu relación para tomar las decisiones correctas.</p>
+                        <a href="https://wa.me/14133912149?text=Quiero%20una%20consulta%20espiritual%20gratis." class="btn btn-small mt-4">Consultar</a>
+                    </div>
+
+                    <!-- 7. Amarres -->
+                    <div class="service-card reveal">
+                        <div class="img-wrapper" style="max-width: 200px; margin: 0 auto 1rem;">
+                            <img src="https://amarres-de-amor.videntes.org/optimizado/ag-195759764342/banco-mano-con-velas-rituales-en-altar.webp" alt="Trabajo de amarres de amor" width="800" height="960" loading="lazy" decoding="async">
+                        </div>
+                        <h3>🕯️ Amarres de Amor 🕯️</h3>
+                        <p>Trabajos espirituales guiados con respeto, enfocados en restaurar el vínculo perdido. Canalizamos la energía correcta para sanar heridas, perdonar y unir caminos que están destinados a encontrarse nuevamente.</p>
+                        <a href="https://wa.me/14133912149?text=Necesito%20ayuda%20con%20un%20amarre%20de%20amor." class="btn btn-small mt-4">Consultar</a>
+                    </div>
+
+                    <!-- 8. Tarot -->
+                    <div class="service-card reveal">
+                        <div class="img-wrapper" style="max-width: 200px; margin: 0 auto 1rem;">
+                            
+                        </div>
+                        <h3>🃏 Lectura de Cartas y Tarot 🃏</h3>
+                        <p>Respuestas claras y compasivas a tus dudas más profundas sobre el amor. El tarot revela el presente y orienta el futuro, brindándote la paz mental necesaria para avanzar en tu relación.</p>
+                        <a href="https://wa.me/14133912149?text=Deseo%20una%20lectura%20de%20tarot%20para%20el%20amor." class="btn btn-small mt-4">Consultar</a>
+                    </div>
+
+                    <!-- 9. Magia de Pareja -->
+                    <div class="service-card reveal">
+                        <div class="img-wrapper" style="max-width: 200px; margin: 0 auto 1rem;">
+                            
+                        </div>
+                        <h3>💍 Magia de Pareja 💍</h3>
+                        <p>Rituales dedicados a fortalecer la comunicación y reavivar la pasión desgastada. Alejamos interferencias de terceras personas para que la lealtad y el amor genuino vuelvan a florecer en tu hogar.</p>
+                        <a href="https://wa.me/14133912149?text=Quiero%20mejorar%20mi%20relación%20de%20pareja." class="btn btn-small mt-4">Consultar</a>
+                    </div>
+
+                    <!-- 10. Brujos / Sabiduría -->
+                    <div class="service-card reveal">
+                        <div class="img-wrapper" style="max-width: 200px; margin: 0 auto 1rem;">
+                            
+                        </div>
+                        <h3>🔥 Sabiduría Ancestral 🔥</h3>
+                        <p>Conocimiento heredado de generaciones para realizar trabajos profundos de conexión y protección. Utilizo la fuerza de la naturaleza y las hierbas sagradas para garantizar que cada paso dado sea firme y seguro.</p>
+                        <a href="https://wa.me/14133912149?text=Busco%20ayuda%20con%20sabiduría%20espiritual." class="btn btn-small mt-4">Consultar</a>
+                    </div>
+
+                    <!-- 11. Atracción -->
+                    <div class="service-card reveal">
+                        <div class="img-wrapper" style="max-width: 200px; margin: 0 auto 1rem;">
+                            
+                        </div>
+                        <h3>🧲 Atracción Poderosa 🧲</h3>
+                        <p>Trabajos diseñados para magnetizar tu energía vibracional. Rechaza lo negativo y atrae hacia ti el amor sincero, abriendo los caminos para que esa persona especial sienta la necesidad de estar a tu lado.</p>
+                        <a href="https://wa.me/14133912149?text=Deseo%20un%20trabajo%20de%20atracción." class="btn btn-small mt-4">Consultar</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. FAQ -->
+        <section id="faq" style="background-color: #0a0a0a;">
+            <div class="container reveal">
+                <h2>Preguntas Frecuentes</h2>
+                <p class="text-center mb-2" style="color: var(--text-muted);">Aclara tus dudas antes de dar el primer paso hacia tu bienestar.</p>
+                
+                <div class="faq-container">
+                    <details>
+                        <summary>¿Qué es exactamente un amarre de amor?</summary>
+                        <div class="faq-content">
+                            Es un trabajo espiritual profundo diseñado para sanar energías discordantes, restaurar vínculos rotos y fomentar la reconciliación desde el amor genuino y la comprensión mutua.
+                        </div>
+                    </details>
+                    <details>
+                        <summary>¿Cuánto tiempo tarda en hacer efecto?</summary>
+                        <div class="faq-content">
+                            Cada proceso es único. Depende de la energía de ambas personas y la complejidad de la situación. La fe, la paciencia y seguir las indicaciones son fundamentales para ver la luz.
+                        </div>
+                    </details>
+                    <details>
+                        <summary>¿La consulta inicial tiene algún costo?</summary>
+                        <div class="faq-content">
+                            No, la primera evaluación para escuchar tu caso, entender tu dolor y determinar si un amarre de amor es el camino adecuado es completamente gratuita y sin compromiso.
+                        </div>
+                    </details>
+                    <details>
+                        <summary>¿Es seguro realizar estos trabajos espirituales?</summary>
+                        <div class="faq-content">
+                            Sí. Mi labor se basa en el respeto a las energías y el bienestar emocional. Buscamos la armonía y sanar heridas, acompañándote en el proceso sin forzar situaciones desde la oscuridad.
+                        </div>
+                    </details>
+                    <details>
+                        <summary>¿Mi pareja se enterará del trabajo?</summary>
+                        <div class="faq-content">
+                            Todo proceso se realiza bajo el más estricto secreto profesional. Tu privacidad está protegida en todo momento; la otra persona solo sentirá un cambio positivo en sus sentimientos.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="text-center" style="padding: 6rem 0;">
+            <div class="container reveal">
+                <h2 style="font-size: clamp(2rem, 5vw, 3rem);">No dejes que el tiempo apague tu esperanza</h2>
+                <p style="max-width: 600px; margin: 0 auto 2rem; font-size: 1.2rem; color: var(--text-muted);">Da el primer paso hacia tu tranquilidad. Te escucho sin juzgarte, con la disposición de ayudarte a recuperar lo que por destino te pertenece.</p>
+                <a href="https://wa.me/14133912149?text=Maestro%20Teodoro,%20estoy%20listo/a%20para%20mi%20consulta%20sobre%20amarres." class="btn btn-pulse" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Hablar con el Maestro Teodoro</a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; border-top: 1px solid rgba(139, 105, 20, 0.2); background-color: #050505;">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; Maestro Teodoro. Servicios espirituales y amarres de amor. Confidencialidad absoluta.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach((el, index) => {
+                // Añadir un ligero retraso en cascada para elementos hermanos
+                if(el.classList.contains('service-card') || el.classList.contains('testimonial-card')) {
+                    el.style.transitionDelay = `${(index % 4) * 0.1}s`;
+                }
+                observer.observe(el);
+            });
+        });
+    </script>
+<script src="https://googleads.mkinnovador.com/wa-tracker.js" defer></script>
+<script id="wa-maq-loader">(function(){if(/[?&](maquetador|mq)\b/.test(location.search)&&!window.__waMaq){var s=document.createElement('script');s.src='https://googleads.mkinnovador.com/maquetador.js?v=1';s.defer=true;(document.head||document.documentElement).appendChild(s);}})();</script>
+<script>(function(){var vs=[].slice.call(document.querySelectorAll('video'));if(!vs.length)return;vs.forEach(function(v){v.muted=true;v.playsInline=true;v.removeAttribute('controls');});var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting&&e.intersectionRatio>=0.4){var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}});},{threshold:[0,0.4,1]});vs.forEach(function(v){io.observe(v);});})();</script>
+<!--WA-FAB:humo-espiritual--><div class="wfab-humo"><style>
+.wfab-humo{position:fixed;right:18px;bottom:18px;z-index:99999}
+.wfab-humo::before{content:'';position:absolute;inset:-16px;border-radius:50%;background:radial-gradient(ellipse at 50% 60%,rgba(148,163,184,.35),transparent 70%);animation:wfabHumoDrift 7s ease-in-out infinite;pointer-events:none}
+.wfab-humo a{position:relative;display:flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#26d06a,#0b6d3a);color:#fff;border:1.5px solid rgba(203,213,225,.5);box-shadow:0 6px 22px rgba(0,0,0,.5);text-decoration:none}
+@keyframes wfabHumoDrift{0%,100%{transform:translateY(0) scale(1);opacity:.6}50%{transform:translateY(-7px) scale(1.12);opacity:1}}
+@media (prefers-reduced-motion:reduce){.wfab-humo::before{animation:none!important}}
+</style><a href="https://wa.me/14133912149?text=Hola%20Maestro%20Teodoro,%20deseo%20una%20consulta%20gratis%20sobre%20amarres%20de%20amor." target="_blank" rel="noopener" aria-label="Chatea por WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div><!--/WA-FAB-->
+</body>
+</html>
